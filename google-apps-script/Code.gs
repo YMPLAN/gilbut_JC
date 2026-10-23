@@ -27,11 +27,23 @@ function setupClassroom() {
   if(prop_('TEACHER_CODE').length<24) fail_('TEACHER_CODE에 24자 이상의 무작위 접속 코드를 먼저 설정하세요.');
   const b=book_();
   locked_(()=>{Object.keys(TABLES).forEach(name=>{let s=b.getSheetByName(name);if(!s)s=b.insertSheet(name);if(s.getLastRow()===0){s.getRange(1,1,1,TABLES[name].length).setValues([TABLES[name]]).setFontWeight('bold').setBackground('#164e47').setFontColor('#ffffff');s.setFrozenRows(1);}table_(b,name);});
-    if(table_(b,'Lessons').getLastRow()===1){const r=UrlFetchApp.fetch('https://raw.githubusercontent.com/YMPLAN/gilbut_JC/main/studio/lessons.json',{muteHttpExceptions:true});if(r.getResponseCode()!==200)fail_('기본 교재를 불러오지 못했습니다. 다시 실행하세요.');const d=JSON.parse(r.getContentText());if(!Array.isArray(d.items)||!d.items.length||d.items.length>200)fail_('교재 형식을 확인하세요.');d.items.forEach(x=>append_(b,'Lessons',{lesson_id:text_(x.id,80),reference_text:text_(x.text,400),reading:text_(x.reading,400),group:text_(x.group,80)}));}
+    if(table_(b,'Lessons').getLastRow()===1){const r=UrlFetchApp.fetch('https://raw.githubusercontent.com/YMPLAN/gilbut_JC/main/studio/lessons.json',{muteHttpExceptions:true});if(r.getResponseCode()!==200)fail_('기본 교재를 불러오지 못했습니다. 다시 실행하세요.');const d=JSON.parse(r.getContentText());if(!Array.isArray(d.items)||!d.items.length||d.items.length>200)fail_('교재 형식을 확인하세요.');d.items.forEach(x=>append_(b,'Lessons',{lesson_id:text_(x.id,80),reference_text:text_(x.text,400),reading:text_(x.reading,400),group:text_(x.activityCode?x.activityCode+' · '+x.activityTitle:x.group,80)}));}
   });
   return '설정 완료. 시트는 학생에게 공유하지 않고 선생님만 관리하세요.';
 }
-function doGet() { return ContentService.createTextOutput(JSON.stringify({ok:true,service:'kotoba-classroom',version:1})).setMimeType(ContentService.MimeType.JSON); }
+function syncClassroomLessons() {
+  if(prop_('TEACHER_CODE').length<24)fail_('선생님 접속 코드 설정이 필요합니다.');
+  const response=UrlFetchApp.fetch('https://raw.githubusercontent.com/YMPLAN/gilbut_JC/main/studio/lessons.json',{muteHttpExceptions:true});
+  if(response.getResponseCode()!==200)fail_('교재를 불러오지 못했습니다. 다시 시도하세요.');
+  const data=JSON.parse(response.getContentText()),ids=new Set();if(!Array.isArray(data.items)||!data.items.length||data.items.length>200)fail_('교재 형식을 확인하세요.');
+  const prepared=data.items.map(x=>{const id=text_(x.id,80),reference=text_(x.text,400),reading=text_(x.reading,400),group=text_(x.group,80);if(!id||!reference||!reading||!group||ids.has(id))fail_('교재의 중복 ID 또는 빈 문장을 확인하세요.');ids.add(id);return {lesson_id:id,reference_text:reference,reading,group:x.activityCode?text_(x.activityCode+' · '+x.activityTitle,80):group};});
+  return locked_(()=>{const b=book_(),existing=rows_(b,'Lessons'),byId=new Map(existing.map(x=>[String(x.lesson_id),x]));let added=0;const conflicts=[];for(const item of prepared){const old=byId.get(item.lesson_id);if(old){if(String(old.reference_text)!==item.reference_text)conflicts.push(item.lesson_id);else if(String(old.group)!==item.group)write_(b,'Lessons',old._row,Object.assign({},old,{group:item.group}));continue;}append_(b,'Lessons',item);added++;}return {added,total:existing.length+added,conflicts};});
+}
+function personalReference_(lesson,p) {
+  if(lesson.lesson_id!=='u1-027-name'||!p.personalName)return String(lesson.reference_text);
+  const name=text_(p.personalName,40).normalize('NFC');if(!/^[ぁ-ゖァ-ヺ一-龯々ー・ 　]{1,40}$/.test(name))fail_('교재 이름은 일본어 표기로 입력하세요.');return name+'です。';
+}
+function doGet() { return ContentService.createTextOutput(JSON.stringify({ok:true,service:'kotoba-classroom',version:2})).setMimeType(ContentService.MimeType.JSON); }
 function doPost(e) {
   let result;
   try { if(!e||!e.postData||e.postData.contents.length>1500000)fail_('요청 크기가 허용 범위를 넘었습니다.');const p=JSON.parse(e.postData.contents);result={ok:true,data:route_(p)}; }
@@ -47,8 +59,9 @@ function route_(p) {
   if(p.role==='teacher'&&p.action==='configure') { authenticate_(p,null); return configure_(p); }
   const b=book_(),auth=authenticate_(p,b);
   if(p.action==='connect')return {role:auth.role,student:auth.student?publicStudent_(auth.student):null,geminiReady:Boolean(prop_('GEMINI_API_KEY')&&prop_('GEMINI_MODEL')),model:prop_('GEMINI_MODEL'),sheetUrl:auth.role==='teacher'?b.getUrl():null,lessonCount:rows_(b,'Lessons').length};
-  if(p.action==='records'){const all=rows_(b,'Records');return {records:all.filter(x=>auth.role==='teacher'||String(x.student_id)===String(auth.student.student_id)).map(publicRecord_),students:auth.role==='teacher'?rows_(b,'Students').map(publicStudent_):[publicStudent_(auth.student)],lessons:rows_(b,'Lessons').map(x=>({id:x.lesson_id,text:x.reference_text})),syncedAt:new Date().toISOString()};}
+  if(p.action==='records'){const all=rows_(b,'Records');return {records:all.filter(x=>auth.role==='teacher'||String(x.student_id)===String(auth.student.student_id)).map(publicRecord_),students:auth.role==='teacher'?rows_(b,'Students').map(publicStudent_):[publicStudent_(auth.student)],lessons:rows_(b,'Lessons').map(x=>({id:x.lesson_id,text:x.reference_text,group:x.group})),syncedAt:new Date().toISOString()};}
   if(auth.role==='teacher'){
+    if(p.action==='syncLessons')return syncClassroomLessons();
     if(p.action==='addStudent')return locked_(()=>{const name=text_(p.name,60),className=text_(p.className,60);if(!name||!className)fail_('학생 이름과 학급을 입력하세요.');if(rows_(b,'Students').length>=500)fail_('학생은 문서당 최대 500명입니다.');const code=Utilities.getUuid().replace(/-/g,'')+Utilities.getUuid().replace(/-/g,'');const s={student_id:'s_'+Utilities.getUuid(),student_name:name,class_name:className,token_hash:hash_(code),active:'true',created_at:new Date().toISOString()};append_(b,'Students',s);return {student:publicStudent_(s),code};});
     if(p.action==='setStudentActive')return locked_(()=>{const s=rows_(b,'Students').find(x=>x.student_id===p.studentId);if(!s)fail_('학생을 찾을 수 없습니다.');s.active=p.active===true?'true':'false';write_(b,'Students',s._row,s);return {student:publicStudent_(s)};});
     if(p.action==='rotateStudentCode')return locked_(()=>{const s=rows_(b,'Students').find(x=>x.student_id===p.studentId);if(!s)fail_('학생을 찾을 수 없습니다.');const code=Utilities.getUuid().replace(/-/g,'')+Utilities.getUuid().replace(/-/g,'');s.token_hash=hash_(code);write_(b,'Students',s._row,s);return {student:publicStudent_(s),code};});
@@ -79,7 +92,8 @@ function wav_(base64) {
 function submit_(p,b,student) {
   if(!/^[a-f0-9-]{36}$/i.test(p.requestId||''))fail_('요청 ID가 올바르지 않습니다.');
   if(![1,2,3].includes(p.rating))fail_('자가 평가를 선택하세요.');
-  const lesson=rows_(b,'Lessons').find(x=>String(x.lesson_id)===p.lessonId);if(!lesson)fail_('선생님 시트에 이 교재 표현이 없습니다. 기본 교재를 선택하세요.');
+  let lesson=rows_(b,'Lessons').find(x=>String(x.lesson_id)===p.lessonId);if(!lesson)fail_('선생님 시트에 이 교재 표현이 없습니다. 선생님이 학급 대시보드에서 새 교재 문항을 추가해 주세요.');
+  lesson=Object.assign({},lesson,{reference_text:personalReference_(lesson,p)});
   if(p.referenceText!==String(lesson.reference_text))fail_('화면의 교재 문장과 선생님 시트의 문장이 다릅니다. 교재를 확인하세요.');
   const evaluate=p.evaluate===true;let seconds=Number(p.seconds),model='';if(evaluate){if(p.consent!==true)fail_('녹음 전송 동의가 필요합니다.');seconds=wav_(p.audio);if(!prop_('GEMINI_API_KEY'))fail_('선생님의 Gemini API 키가 아직 연결되지 않았습니다.');model=model_();}else if(!Number.isFinite(seconds)||seconds<0.4||seconds>31)fail_('녹음 길이를 확인하세요.');
   let record,row,existing=false;
@@ -108,3 +122,4 @@ function validateAssessment_(r) {
   const usable=r.assessable&&r.confidence!=='low'&&r.transcript.trim().length>0;
   return {assessment_status:usable?'assessed':'unscorable',ai_score:usable?Math.round((r.clarity+r.fluency)/2):'',clarity:usable?Math.round(r.clarity):'',fluency:usable?Math.round(r.fluency):'',feedback:r.feedback,transcript:r.transcript};
 }
+

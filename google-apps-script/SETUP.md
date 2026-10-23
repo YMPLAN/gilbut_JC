@@ -74,3 +74,12 @@ API 키를 바꿀 때는 스크립트 속성의 GEMINI_API_KEY만 수정합니�
 실제 시트와 Gemini API 연결 검증은 선생님 배포 후 테스트 학생과 짧은 녹음으로 수행합니다. 화면에 0명·0회 또는 미연결로 표시되는 것은 샘플 기록을 넣지 않았기 때문입니다.
 
 참고: [Apps Script 웹 앱](https://developers.google.com/apps-script/guides/web), [속성 서비스](https://developers.google.com/apps-script/guides/properties), [Gemini 오디오 이해](https://ai.google.dev/gemini-api/docs/audio), [구조화 출력](https://ai.google.dev/gemini-api/docs/structured-output).
+
+## 회화 활동이 추가된 버전으로 업데이트
+
+이미 연결한 선생님은 최신 Code.gs로 코드를 교체하고 저장한 다음 **배포 → 배포 관리 → 수정 → 새 버전 → 배포**를 실행합니다. 기존 배포 주소와 스크립트 속성을 유지하세요. 프로그램에서 선생님으로 연결하고 **학급 대시보드 → 새 교재 문항을 시트에 추가**를 누릅니다. Students와 Records는 그대로 유지하며 Lessons에 누락된 ID만 추가합니다. 기존 ID의 문장이 다르면 덮어쓰지 않고 충돌 수를 표시합니다. 처음 설치하는 시트는 최신 전체 교재로 시작합니다.
+
+27쪽 내 이름 말하기는 학생이 적용한 일본어 이름을 실제 평가 문장과 기록에 반영합니다. 이름 자체의 맞춤법 채점이 아니라 표시된 문장을 읽는 발음 연습입니다.
+
+문항 동기화는 같은 ID·같은 문장의 활동 분류를 최신 값으로 정리합니다. 기존 문장이나 학생 기록을 덮어쓰지 않습니다.
+

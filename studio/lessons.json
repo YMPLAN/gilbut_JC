@@ -9,7 +9,11 @@
       "group": "자기소개",
       "tip": "は・じ・め・ま・し・て를 일정한 박자로 말해 보세요.",
       "audio": "audio/1_15_1.mp3",
-      "sourcePage": "15쪽 · 의사소통 기본 표현"
+      "sourcePage": "15쪽 · 의사소통 기본 표현",
+      "activityCode": "01|015",
+      "activityTitle": "의사소통 기본 표현",
+      "kind": "phrase",
+      "sourceFile": "015_01.html"
     },
     {
       "id": "u1-02",
@@ -19,7 +23,11 @@
       "group": "자기소개",
       "tip": "이름 뒤의 です까지 자연스럽게 이어 말해 보세요.",
       "audio": "audio/1_15_2.mp3",
-      "sourcePage": "15쪽 · 의사소통 기본 표현"
+      "sourcePage": "15쪽 · 의사소통 기본 표현",
+      "activityCode": "01|015",
+      "activityTitle": "의사소통 기본 표현",
+      "kind": "phrase",
+      "sourceFile": "015_01.html"
     },
     {
       "id": "u1-03",
@@ -29,7 +37,11 @@
       "group": "자기소개",
       "tip": "조사 は는 이 문장에서 ‘와’로 읽습니다.",
       "audio": "audio/1_15_3.mp3",
-      "sourcePage": "15쪽 · 의사소통 기본 표현"
+      "sourcePage": "15쪽 · 의사소통 기본 표현",
+      "activityCode": "01|015",
+      "activityTitle": "의사소통 기본 표현",
+      "kind": "phrase",
+      "sourceFile": "015_01.html"
     },
     {
       "id": "u1-04",
@@ -39,7 +51,11 @@
       "group": "인사",
       "tip": "끝의 よう를 너무 짧게 끊지 말고 길이를 살려 보세요.",
       "audio": "audio/1_15_4.mp3",
-      "sourcePage": "15쪽 · 의사소통 기본 표현"
+      "sourcePage": "15쪽 · 의사소통 기본 표현",
+      "activityCode": "01|015",
+      "activityTitle": "의사소통 기본 표현",
+      "kind": "phrase",
+      "sourceFile": "015_01.html"
     },
     {
       "id": "u1-05",
@@ -49,7 +65,11 @@
       "group": "인사",
       "tip": "じゃあ의 긴 모음을 살려 친근하게 말해 보세요.",
       "audio": "audio/1_15_5.mp3",
-      "sourcePage": "15쪽 · 의사소통 기본 표현"
+      "sourcePage": "15쪽 · 의사소통 기본 표현",
+      "activityCode": "01|015",
+      "activityTitle": "의사소통 기본 표현",
+      "kind": "phrase",
+      "sourceFile": "015_01.html"
     },
     {
       "id": "u1-06",
@@ -59,7 +79,11 @@
       "group": "인사",
       "tip": "작은 っ에서 한 박자 멈춘 뒤 て를 말해 보세요.",
       "audio": "audio/1_15_6.mp3",
-      "sourcePage": "15쪽 · 의사소통 기본 표현"
+      "sourcePage": "15쪽 · 의사소통 기본 표현",
+      "activityCode": "01|015",
+      "activityTitle": "의사소통 기본 표현",
+      "kind": "phrase",
+      "sourceFile": "015_01.html"
     },
     {
       "id": "u1-07",
@@ -69,7 +93,11 @@
       "group": "인사",
       "tip": "た・だ・い・ま 네 박자를 의식해서 말해 보세요.",
       "audio": "audio/1_15_7.mp3",
-      "sourcePage": "15쪽 · 의사소통 기본 표현"
+      "sourcePage": "15쪽 · 의사소통 기본 표현",
+      "activityCode": "01|015",
+      "activityTitle": "의사소통 기본 표현",
+      "kind": "phrase",
+      "sourceFile": "015_01.html"
     },
     {
       "id": "u1-08",
@@ -79,7 +107,11 @@
       "group": "기초 어휘",
       "tip": "ん도 한 박자입니다. か・ん・こ・く로 연습하세요.",
       "audio": "audio/1_2_1.mp3",
-      "sourcePage": "16쪽 · 듣고 말하기 1"
+      "sourcePage": "16쪽 · 듣고 말하기 1",
+      "activityCode": "01|016",
+      "activityTitle": "듣고 말하기 1 · 단어",
+      "kind": "word",
+      "sourceFile": "016_01.html"
     },
     {
       "id": "u1-09",
@@ -89,7 +121,11 @@
       "group": "기초 어휘",
       "tip": "ら에 힘을 과하게 주지 않고 짧게 말해 보세요.",
       "audio": "audio/1_2_2.mp3",
-      "sourcePage": "16쪽 · 듣고 말하기 1"
+      "sourcePage": "16쪽 · 듣고 말하기 1",
+      "activityCode": "01|016",
+      "activityTitle": "듣고 말하기 1 · 단어",
+      "kind": "word",
+      "sourceFile": "016_01.html"
     },
     {
       "id": "u1-10",
@@ -99,7 +135,11 @@
       "group": "기초 어휘",
       "tip": "き・ま・し・た를 자연스럽게 이어 말해 보세요.",
       "audio": "audio/1_2_3.mp3",
-      "sourcePage": "16쪽 · 듣고 말하기 1"
+      "sourcePage": "16쪽 · 듣고 말하기 1",
+      "activityCode": "01|016",
+      "activityTitle": "듣고 말하기 1 · 단어",
+      "kind": "word",
+      "sourceFile": "016_01.html"
     },
     {
       "id": "u1-11",
@@ -109,7 +149,11 @@
       "group": "기초 어휘",
       "tip": "예문 소리와 자신의 녹음을 번갈아 들어 보세요.",
       "audio": "audio/1_2_4.mp3",
-      "sourcePage": "16쪽 · 듣고 말하기 1"
+      "sourcePage": "16쪽 · 듣고 말하기 1",
+      "activityCode": "01|016",
+      "activityTitle": "듣고 말하기 1 · 단어",
+      "kind": "word",
+      "sourceFile": "016_01.html"
     },
     {
       "id": "u1-12",
@@ -119,7 +163,11 @@
       "group": "기초 어휘",
       "tip": "ええ의 길이를 살려 말해 보세요.",
       "audio": "audio/1_2_5.mp3",
-      "sourcePage": "16쪽 · 듣고 말하기 1"
+      "sourcePage": "16쪽 · 듣고 말하기 1",
+      "activityCode": "01|016",
+      "activityTitle": "듣고 말하기 1 · 단어",
+      "kind": "word",
+      "sourceFile": "016_01.html"
     },
     {
       "id": "u1-13",
@@ -129,7 +177,11 @@
       "group": "기초 어휘",
       "tip": "ちゃ는 한 박자, ん은 한 박자입니다.",
       "audio": "audio/1_2_6.mp3",
-      "sourcePage": "16쪽 · 듣고 말하기 1"
+      "sourcePage": "16쪽 · 듣고 말하기 1",
+      "activityCode": "01|016",
+      "activityTitle": "듣고 말하기 1 · 단어",
+      "kind": "word",
+      "sourceFile": "016_01.html"
     },
     {
       "id": "u1-14",
@@ -139,7 +191,11 @@
       "group": "기초 어휘",
       "tip": "ぼ・く를 또렷하게 말해 보세요.",
       "audio": "audio/1_2_7.mp3",
-      "sourcePage": "16쪽 · 듣고 말하기 1"
+      "sourcePage": "16쪽 · 듣고 말하기 1",
+      "activityCode": "01|016",
+      "activityTitle": "듣고 말하기 1 · 단어",
+      "kind": "word",
+      "sourceFile": "016_01.html"
     },
     {
       "id": "u1-15",
@@ -149,8 +205,2046 @@
       "group": "기초 어휘",
       "tip": "よ・ろ・し・く를 일정한 박자로 연습하세요.",
       "audio": "audio/1_2_8.mp3",
-      "sourcePage": "16쪽 · 듣고 말하기 1"
+      "sourcePage": "16쪽 · 듣고 말하기 1",
+      "activityCode": "01|016",
+      "activityTitle": "듣고 말하기 1 · 단어",
+      "kind": "word",
+      "sourceFile": "016_01.html"
+    },
+    {
+      "id": "u1-017_01-01",
+      "text": "はじめまして",
+      "reading": "はじめまして",
+      "meaning": "처음 뵙겠습니다",
+      "group": "회화",
+      "tip": "대사의 뜻을 떠올리며 긴 모음, 작은 っ, 문장 끝의 억양과 자연스러운 연결을 연습하세요.",
+      "audio": "audio/1_3_1.mp3",
+      "activityCode": "03|017",
+      "activityTitle": "듣고 말하기 1 · 기본 문장",
+      "kind": "conversation",
+      "speaker": "",
+      "sourcePage": "03|017 · 듣고 말하기 1 · 기본 문장",
+      "sourceFile": "017_01.html",
+      "audioBundle": {
+        "path": "audio/activities/u1-017.bin",
+        "offset": 0,
+        "length": 45164
+      }
+    },
+    {
+      "id": "u1-017_01-02",
+      "text": "韓国から 来ました",
+      "reading": "かんこくから きました",
+      "meaning": "한국에서 왔습니다",
+      "group": "회화",
+      "tip": "대사의 뜻을 떠올리며 긴 모음, 작은 っ, 문장 끝의 억양과 자연스러운 연결을 연습하세요.",
+      "audio": "audio/1_3_2.mp3",
+      "activityCode": "03|017",
+      "activityTitle": "듣고 말하기 1 · 기본 문장",
+      "kind": "conversation",
+      "speaker": "",
+      "sourcePage": "03|017 · 듣고 말하기 1 · 기본 문장",
+      "sourceFile": "017_01.html",
+      "audioBundle": {
+        "path": "audio/activities/u1-017.bin",
+        "offset": 45164,
+        "length": 67107
+      }
+    },
+    {
+      "id": "u1-017_01-03",
+      "text": "キム・ジウです",
+      "reading": "きむ・じうです",
+      "meaning": "김지우입니다",
+      "group": "회화",
+      "tip": "대사의 뜻을 떠올리며 긴 모음, 작은 っ, 문장 끝의 억양과 자연스러운 연결을 연습하세요.",
+      "audio": "audio/1_3_3.mp3",
+      "activityCode": "03|017",
+      "activityTitle": "듣고 말하기 1 · 기본 문장",
+      "kind": "conversation",
+      "speaker": "",
+      "sourcePage": "03|017 · 듣고 말하기 1 · 기본 문장",
+      "sourceFile": "017_01.html",
+      "audioBundle": {
+        "path": "audio/activities/u1-017.bin",
+        "offset": 112271,
+        "length": 43283
+      }
+    },
+    {
+      "id": "u1-017_01-04",
+      "text": "よろしく お願いします",
+      "reading": "よろしく おねがいします",
+      "meaning": "잘 부탁드립니다",
+      "group": "회화",
+      "tip": "대사의 뜻을 떠올리며 긴 모음, 작은 っ, 문장 끝의 억양과 자연스러운 연결을 연습하세요.",
+      "audio": "audio/1_3_4.mp3",
+      "activityCode": "03|017",
+      "activityTitle": "듣고 말하기 1 · 기본 문장",
+      "kind": "conversation",
+      "speaker": "",
+      "sourcePage": "03|017 · 듣고 말하기 1 · 기본 문장",
+      "sourceFile": "017_01.html",
+      "audioBundle": {
+        "path": "audio/activities/u1-017.bin",
+        "offset": 155554,
+        "length": 73376
+      }
+    },
+    {
+      "id": "u1-017_01-05",
+      "text": "こちらこそ よろしく",
+      "reading": "こちらこそ よろしく",
+      "meaning": "저야말로 잘 부탁해요",
+      "group": "회화",
+      "tip": "대사의 뜻을 떠올리며 긴 모음, 작은 っ, 문장 끝의 억양과 자연스러운 연결을 연습하세요.",
+      "audio": "audio/1_3_5.mp3",
+      "activityCode": "03|017",
+      "activityTitle": "듣고 말하기 1 · 기본 문장",
+      "kind": "conversation",
+      "speaker": "",
+      "sourcePage": "03|017 · 듣고 말하기 1 · 기본 문장",
+      "sourceFile": "017_01.html",
+      "audioBundle": {
+        "path": "audio/activities/u1-017.bin",
+        "offset": 228930,
+        "length": 67107
+      }
+    },
+    {
+      "id": "u1-017_01-06",
+      "text": "どうぞ よろしく",
+      "reading": "どうぞ よろしく",
+      "meaning": "아무쪼록 잘 부탁해요",
+      "group": "회화",
+      "tip": "대사의 뜻을 떠올리며 긴 모음, 작은 っ, 문장 끝의 억양과 자연스러운 연결을 연습하세요.",
+      "audio": "audio/1_3_6.mp3",
+      "activityCode": "03|017",
+      "activityTitle": "듣고 말하기 1 · 기본 문장",
+      "kind": "conversation",
+      "speaker": "",
+      "sourcePage": "03|017 · 듣고 말하기 1 · 기본 문장",
+      "sourceFile": "017_01.html",
+      "audioBundle": {
+        "path": "audio/activities/u1-017.bin",
+        "offset": 296037,
+        "length": 52687
+      }
+    },
+    {
+      "id": "u1-018_01-01",
+      "text": "はじめまして。",
+      "reading": "はじめまして。",
+      "meaning": "처음 뵙겠습니다.",
+      "group": "회화",
+      "tip": "대사의 뜻을 떠올리며 긴 모음, 작은 っ, 문장 끝의 억양과 자연스러운 연결을 연습하세요.",
+      "audio": "audio/1_4_1.mp3",
+      "activityCode": "01|018",
+      "activityTitle": "이름·출신·부탁 표현",
+      "kind": "conversation",
+      "speaker": "",
+      "sourcePage": "01|018 · 이름·출신·부탁 표현",
+      "sourceFile": "018_01.html",
+      "audioBundle": {
+        "path": "audio/activities/u1-018.bin",
+        "offset": 0,
+        "length": 40149
+      }
+    },
+    {
+      "id": "u1-018_01-02",
+      "text": "キム・ジウです。",
+      "reading": "きむ・じうです。",
+      "meaning": "김지우입니다.",
+      "group": "회화",
+      "tip": "대사의 뜻을 떠올리며 긴 모음, 작은 っ, 문장 끝의 억양과 자연스러운 연결을 연습하세요.",
+      "audio": "audio/1_4_2.mp3",
+      "activityCode": "01|018",
+      "activityTitle": "이름·출신·부탁 표현",
+      "kind": "conversation",
+      "speaker": "",
+      "sourcePage": "01|018 · 이름·출신·부탁 표현",
+      "sourceFile": "018_01.html",
+      "audioBundle": {
+        "path": "audio/activities/u1-018.bin",
+        "offset": 40149,
+        "length": 41403
+      }
+    },
+    {
+      "id": "u1-018_01-03",
+      "text": "韓国から 来ました。",
+      "reading": "かんこくから きました。",
+      "meaning": "한국에서 왔습니다.",
+      "group": "회화",
+      "tip": "대사의 뜻을 떠올리며 긴 모음, 작은 っ, 문장 끝의 억양과 자연스러운 연결을 연습하세요.",
+      "audio": "audio/1_4_3.mp3",
+      "activityCode": "01|018",
+      "activityTitle": "이름·출신·부탁 표현",
+      "kind": "conversation",
+      "speaker": "",
+      "sourcePage": "01|018 · 이름·출신·부탁 표현",
+      "sourceFile": "018_01.html",
+      "audioBundle": {
+        "path": "audio/activities/u1-018.bin",
+        "offset": 81552,
+        "length": 64599
+      }
+    },
+    {
+      "id": "u1-018_01-04",
+      "text": "よろしく お願いします。",
+      "reading": "よろしく おねがいします。",
+      "meaning": "잘 부탁드립니다.",
+      "group": "회화",
+      "tip": "대사의 뜻을 떠올리며 긴 모음, 작은 っ, 문장 끝의 억양과 자연스러운 연결을 연습하세요.",
+      "audio": "audio/1_4_4.mp3",
+      "activityCode": "01|018",
+      "activityTitle": "이름·출신·부탁 표현",
+      "kind": "conversation",
+      "speaker": "",
+      "sourcePage": "01|018 · 이름·출신·부탁 표현",
+      "sourceFile": "018_01.html",
+      "audioBundle": {
+        "path": "audio/activities/u1-018.bin",
+        "offset": 146151,
+        "length": 62718
+      }
+    },
+    {
+      "id": "u1-018_01-05",
+      "text": "こちらこそ よろしく お願いします。",
+      "reading": "こちらこそ よろしく おねがいします。",
+      "meaning": "저야말로 잘 부탁드립니다.",
+      "group": "회화",
+      "tip": "대사의 뜻을 떠올리며 긴 모음, 작은 っ, 문장 끝의 억양과 자연스러운 연결을 연습하세요.",
+      "audio": "audio/1_4_5.mp3",
+      "activityCode": "01|018",
+      "activityTitle": "이름·출신·부탁 표현",
+      "kind": "conversation",
+      "speaker": "",
+      "sourcePage": "01|018 · 이름·출신·부탁 표현",
+      "sourceFile": "018_01.html",
+      "audioBundle": {
+        "path": "audio/activities/u1-018.bin",
+        "offset": 208869,
+        "length": 107858
+      }
+    },
+    {
+      "id": "u1-019_01-01",
+      "text": "キム・ジウ",
+      "reading": "きむ・じう",
+      "meaning": "김지우",
+      "group": "회화",
+      "tip": "원음을 듣고 모음의 길이와 각 박자를 살려 말해 보세요.",
+      "audio": "audio/1_5_1.mp3",
+      "activityCode": "02|019",
+      "activityTitle": "이름 소개하기",
+      "kind": "word",
+      "speaker": "",
+      "sourcePage": "02|019 · 이름 소개하기",
+      "sourceFile": "019_01.html",
+      "audioBundle": {
+        "path": "audio/activities/u1-019.bin",
+        "offset": 0,
+        "length": 59584
+      }
+    },
+    {
+      "id": "u1-019_01-02",
+      "text": "はじめまして。",
+      "reading": "はじめまして。",
+      "meaning": "처음 뵙겠습니다.",
+      "group": "회화",
+      "tip": "대사의 뜻을 떠올리며 긴 모음, 작은 っ, 문장 끝의 억양과 자연스러운 연결을 연습하세요.",
+      "audio": "audio/1_5_2.mp3",
+      "activityCode": "02|019",
+      "activityTitle": "이름 소개하기",
+      "kind": "conversation",
+      "speaker": "",
+      "sourcePage": "02|019 · 이름 소개하기",
+      "sourceFile": "019_01.html",
+      "audioBundle": {
+        "path": "audio/activities/u1-019.bin",
+        "offset": 59584,
+        "length": 42656
+      }
+    },
+    {
+      "id": "u1-019_01-03",
+      "text": "キム・ジウです。",
+      "reading": "きむ・じうです。",
+      "meaning": "김지우입니다.",
+      "group": "회화",
+      "tip": "대사의 뜻을 떠올리며 긴 모음, 작은 っ, 문장 끝의 억양과 자연스러운 연결을 연습하세요.",
+      "audio": "audio/1_5_3.mp3",
+      "activityCode": "02|019",
+      "activityTitle": "이름 소개하기",
+      "kind": "conversation",
+      "speaker": "",
+      "sourcePage": "02|019 · 이름 소개하기",
+      "sourceFile": "019_01.html",
+      "audioBundle": {
+        "path": "audio/activities/u1-019.bin",
+        "offset": 102240,
+        "length": 43910
+      }
+    },
+    {
+      "id": "u1-019_01-04",
+      "text": "中村 たくみ",
+      "reading": "なかむら たくみ",
+      "meaning": "나카무라 다쿠미",
+      "group": "회화",
+      "tip": "원음을 듣고 모음의 길이와 각 박자를 살려 말해 보세요.",
+      "audio": "audio/1_5_4.mp3",
+      "activityCode": "02|019",
+      "activityTitle": "이름 소개하기",
+      "kind": "word",
+      "speaker": "",
+      "sourcePage": "02|019 · 이름 소개하기",
+      "sourceFile": "019_01.html",
+      "audioBundle": {
+        "path": "audio/activities/u1-019.bin",
+        "offset": 146150,
+        "length": 55195
+      }
+    },
+    {
+      "id": "u1-019_01-05",
+      "text": "はじめまして。",
+      "reading": "はじめまして。",
+      "meaning": "처음 뵙겠습니다.",
+      "group": "회화",
+      "tip": "대사의 뜻을 떠올리며 긴 모음, 작은 っ, 문장 끝의 억양과 자연스러운 연결을 연습하세요.",
+      "audio": "audio/1_5_5.mp3",
+      "activityCode": "02|019",
+      "activityTitle": "이름 소개하기",
+      "kind": "conversation",
+      "speaker": "",
+      "sourcePage": "02|019 · 이름 소개하기",
+      "sourceFile": "019_01.html",
+      "audioBundle": {
+        "path": "audio/activities/u1-019.bin",
+        "offset": 201345,
+        "length": 43910
+      }
+    },
+    {
+      "id": "u1-019_01-06",
+      "text": "中村 たくみです。",
+      "reading": "なかむら たくみです。",
+      "meaning": "나카무라 다쿠미입니다.",
+      "group": "회화",
+      "tip": "대사의 뜻을 떠올리며 긴 모음, 작은 っ, 문장 끝의 억양과 자연스러운 연결을 연습하세요.",
+      "audio": "audio/1_5_6.mp3",
+      "activityCode": "02|019",
+      "activityTitle": "이름 소개하기",
+      "kind": "conversation",
+      "speaker": "",
+      "sourcePage": "02|019 · 이름 소개하기",
+      "sourceFile": "019_01.html",
+      "audioBundle": {
+        "path": "audio/activities/u1-019.bin",
+        "offset": 245255,
+        "length": 70242
+      }
+    },
+    {
+      "id": "u1-019_01-07",
+      "text": "吉田 さくら",
+      "reading": "よしだ さくら",
+      "meaning": "요시다 사쿠라",
+      "group": "회화",
+      "tip": "원음을 듣고 모음의 길이와 각 박자를 살려 말해 보세요.",
+      "audio": "audio/1_5_7.mp3",
+      "activityCode": "02|019",
+      "activityTitle": "이름 소개하기",
+      "kind": "word",
+      "speaker": "",
+      "sourcePage": "02|019 · 이름 소개하기",
+      "sourceFile": "019_01.html",
+      "audioBundle": {
+        "path": "audio/activities/u1-019.bin",
+        "offset": 315497,
+        "length": 55195
+      }
+    },
+    {
+      "id": "u1-019_01-08",
+      "text": "はじめまして。",
+      "reading": "はじめまして。",
+      "meaning": "처음 뵙겠습니다.",
+      "group": "회화",
+      "tip": "대사의 뜻을 떠올리며 긴 모음, 작은 っ, 문장 끝의 억양과 자연스러운 연결을 연습하세요.",
+      "audio": "audio/1_5_8.mp3",
+      "activityCode": "02|019",
+      "activityTitle": "이름 소개하기",
+      "kind": "conversation",
+      "speaker": "",
+      "sourcePage": "02|019 · 이름 소개하기",
+      "sourceFile": "019_01.html",
+      "audioBundle": {
+        "path": "audio/activities/u1-019.bin",
+        "offset": 370692,
+        "length": 42656
+      }
+    },
+    {
+      "id": "u1-019_01-09",
+      "text": "吉田 さくらです。",
+      "reading": "よしだ さくらです。",
+      "meaning": "요시다 사쿠라입니다.",
+      "group": "회화",
+      "tip": "대사의 뜻을 떠올리며 긴 모음, 작은 っ, 문장 끝의 억양과 자연스러운 연결을 연습하세요.",
+      "audio": "audio/1_5_9.mp3",
+      "activityCode": "02|019",
+      "activityTitle": "이름 소개하기",
+      "kind": "conversation",
+      "speaker": "",
+      "sourcePage": "02|019 · 이름 소개하기",
+      "sourceFile": "019_01.html",
+      "audioBundle": {
+        "path": "audio/activities/u1-019.bin",
+        "offset": 413348,
+        "length": 50180
+      }
+    },
+    {
+      "id": "u1-019_01-10",
+      "text": "山下 はると",
+      "reading": "やました はると",
+      "meaning": "야마시타 하루토",
+      "group": "회화",
+      "tip": "원음을 듣고 모음의 길이와 각 박자를 살려 말해 보세요.",
+      "audio": "audio/1_5_10.mp3",
+      "activityCode": "02|019",
+      "activityTitle": "이름 소개하기",
+      "kind": "word",
+      "speaker": "",
+      "sourcePage": "02|019 · 이름 소개하기",
+      "sourceFile": "019_01.html",
+      "audioBundle": {
+        "path": "audio/activities/u1-019.bin",
+        "offset": 463528,
+        "length": 62718
+      }
+    },
+    {
+      "id": "u1-019_01-11",
+      "text": "はじめまして。",
+      "reading": "はじめまして。",
+      "meaning": "처음 뵙겠습니다.",
+      "group": "회화",
+      "tip": "대사의 뜻을 떠올리며 긴 모음, 작은 っ, 문장 끝의 억양과 자연스러운 연결을 연습하세요.",
+      "audio": "audio/1_5_11.mp3",
+      "activityCode": "02|019",
+      "activityTitle": "이름 소개하기",
+      "kind": "conversation",
+      "speaker": "",
+      "sourcePage": "02|019 · 이름 소개하기",
+      "sourceFile": "019_01.html",
+      "audioBundle": {
+        "path": "audio/activities/u1-019.bin",
+        "offset": 526246,
+        "length": 37641
+      }
+    },
+    {
+      "id": "u1-019_01-12",
+      "text": "山下 はるとです。",
+      "reading": "やました はるとです。",
+      "meaning": "야마시타 하루토입니다.",
+      "group": "회화",
+      "tip": "대사의 뜻을 떠올리며 긴 모음, 작은 っ, 문장 끝의 억양과 자연스러운 연결을 연습하세요.",
+      "audio": "audio/1_5_12.mp3",
+      "activityCode": "02|019",
+      "activityTitle": "이름 소개하기",
+      "kind": "conversation",
+      "speaker": "",
+      "sourcePage": "02|019 · 이름 소개하기",
+      "sourceFile": "019_01.html",
+      "audioBundle": {
+        "path": "audio/activities/u1-019.bin",
+        "offset": 563887,
+        "length": 50180
+      }
+    },
+    {
+      "id": "u1-019_02-01",
+      "text": "韓国",
+      "reading": "かんこく",
+      "meaning": "한국",
+      "group": "회화",
+      "tip": "원음을 듣고 모음의 길이와 각 박자를 살려 말해 보세요.",
+      "audio": "audio/1_6_1.mp3",
+      "activityCode": "03|019",
+      "activityTitle": "출신 말하기",
+      "kind": "word",
+      "speaker": "",
+      "sourcePage": "03|019 · 출신 말하기",
+      "sourceFile": "019_02.html",
+      "audioBundle": {
+        "path": "audio/activities/u1-019b.bin",
+        "offset": 0,
+        "length": 47045
+      }
+    },
+    {
+      "id": "u1-019_02-02",
+      "text": "韓国から 来ました。",
+      "reading": "かんこくから きました。",
+      "meaning": "한국에서 왔습니다.",
+      "group": "회화",
+      "tip": "대사의 뜻을 떠올리며 긴 모음, 작은 っ, 문장 끝의 억양과 자연스러운 연결을 연습하세요.",
+      "audio": "audio/1_6_2.mp3",
+      "activityCode": "03|019",
+      "activityTitle": "출신 말하기",
+      "kind": "conversation",
+      "speaker": "",
+      "sourcePage": "03|019 · 출신 말하기",
+      "sourceFile": "019_02.html",
+      "audioBundle": {
+        "path": "audio/activities/u1-019b.bin",
+        "offset": 47045,
+        "length": 61465
+      }
+    },
+    {
+      "id": "u1-019_02-03",
+      "text": "日本",
+      "reading": "にほん",
+      "meaning": "일본",
+      "group": "회화",
+      "tip": "원음을 듣고 모음의 길이와 각 박자를 살려 말해 보세요.",
+      "audio": "audio/1_6_3.mp3",
+      "activityCode": "03|019",
+      "activityTitle": "출신 말하기",
+      "kind": "word",
+      "speaker": "",
+      "sourcePage": "03|019 · 출신 말하기",
+      "sourceFile": "019_02.html",
+      "audioBundle": {
+        "path": "audio/activities/u1-019b.bin",
+        "offset": 108510,
+        "length": 36387
+      }
+    },
+    {
+      "id": "u1-019_02-04",
+      "text": "日本から 来ました。",
+      "reading": "にほんから きました。",
+      "meaning": "일본에서 왔습니다.",
+      "group": "회화",
+      "tip": "대사의 뜻을 떠올리며 긴 모음, 작은 っ, 문장 끝의 억양과 자연스러운 연결을 연습하세요.",
+      "audio": "audio/1_6_4.mp3",
+      "activityCode": "03|019",
+      "activityTitle": "출신 말하기",
+      "kind": "conversation",
+      "speaker": "",
+      "sourcePage": "03|019 · 출신 말하기",
+      "sourceFile": "019_02.html",
+      "audioBundle": {
+        "path": "audio/activities/u1-019b.bin",
+        "offset": 144897,
+        "length": 72123
+      }
+    },
+    {
+      "id": "u1-019_02-05",
+      "text": "中国",
+      "reading": "ちゅうごく",
+      "meaning": "중국",
+      "group": "회화",
+      "tip": "원음을 듣고 모음의 길이와 각 박자를 살려 말해 보세요.",
+      "audio": "audio/1_6_5.mp3",
+      "activityCode": "03|019",
+      "activityTitle": "출신 말하기",
+      "kind": "word",
+      "speaker": "",
+      "sourcePage": "03|019 · 출신 말하기",
+      "sourceFile": "019_02.html",
+      "audioBundle": {
+        "path": "audio/activities/u1-019b.bin",
+        "offset": 217020,
+        "length": 45164
+      }
+    },
+    {
+      "id": "u1-019_02-06",
+      "text": "中国から 来ました。",
+      "reading": "ちゅうごくから きました。",
+      "meaning": "중국에서 왔습니다.",
+      "group": "회화",
+      "tip": "대사의 뜻을 떠올리며 긴 모음, 작은 っ, 문장 끝의 억양과 자연스러운 연결을 연습하세요.",
+      "audio": "audio/1_6_6.mp3",
+      "activityCode": "03|019",
+      "activityTitle": "출신 말하기",
+      "kind": "conversation",
+      "speaker": "",
+      "sourcePage": "03|019 · 출신 말하기",
+      "sourceFile": "019_02.html",
+      "audioBundle": {
+        "path": "audio/activities/u1-019b.bin",
+        "offset": 262184,
+        "length": 67734
+      }
+    },
+    {
+      "id": "u1-019_02-07",
+      "text": "ベトナム",
+      "reading": "べとなむ",
+      "meaning": "베트남",
+      "group": "회화",
+      "tip": "원음을 듣고 모음의 길이와 각 박자를 살려 말해 보세요.",
+      "audio": "audio/1_6_7.mp3",
+      "activityCode": "03|019",
+      "activityTitle": "출신 말하기",
+      "kind": "word",
+      "speaker": "",
+      "sourcePage": "03|019 · 출신 말하기",
+      "sourceFile": "019_02.html",
+      "audioBundle": {
+        "path": "audio/activities/u1-019b.bin",
+        "offset": 329918,
+        "length": 38895
+      }
+    },
+    {
+      "id": "u1-019_02-08",
+      "text": "ベトナムから 来ました。",
+      "reading": "べとなむから きました。",
+      "meaning": "베트남에서 왔습니다.",
+      "group": "회화",
+      "tip": "대사의 뜻을 떠올리며 긴 모음, 작은 っ, 문장 끝의 억양과 자연스러운 연결을 연습하세요.",
+      "audio": "audio/1_6_8.mp3",
+      "activityCode": "03|019",
+      "activityTitle": "출신 말하기",
+      "kind": "conversation",
+      "speaker": "",
+      "sourcePage": "03|019 · 출신 말하기",
+      "sourceFile": "019_02.html",
+      "audioBundle": {
+        "path": "audio/activities/u1-019b.bin",
+        "offset": 368813,
+        "length": 67107
+      }
+    },
+    {
+      "id": "u1-020_01-01",
+      "text": "はじめまして。",
+      "reading": "はじめまして。",
+      "meaning": "처음 뵙겠습니다.",
+      "group": "회화",
+      "tip": "대사의 뜻을 떠올리며 긴 모음, 작은 っ, 문장 끝의 억양과 자연스러운 연결을 연습하세요.",
+      "audio": "audio/1_7_1.mp3",
+      "activityCode": "01|020",
+      "activityTitle": "교실에서 첫인사",
+      "kind": "conversation",
+      "speaker": "ジウ",
+      "sourcePage": "01|020 · 교실에서 첫인사",
+      "sourceFile": "020_01.html",
+      "audioBundle": {
+        "path": "audio/activities/u1-020.bin",
+        "offset": 0,
+        "length": 47672
+      }
+    },
+    {
+      "id": "u1-020_01-02",
+      "text": "韓国から 来ました。",
+      "reading": "かんこくから きました。",
+      "meaning": "한국에서 왔습니다.",
+      "group": "회화",
+      "tip": "대사의 뜻을 떠올리며 긴 모음, 작은 っ, 문장 끝의 억양과 자연스러운 연결을 연습하세요.",
+      "audio": "audio/1_7_2.mp3",
+      "activityCode": "01|020",
+      "activityTitle": "교실에서 첫인사",
+      "kind": "conversation",
+      "speaker": "ジウ",
+      "sourcePage": "01|020 · 교실에서 첫인사",
+      "sourceFile": "020_01.html",
+      "audioBundle": {
+        "path": "audio/activities/u1-020.bin",
+        "offset": 47672,
+        "length": 57076
+      }
+    },
+    {
+      "id": "u1-020_01-03",
+      "text": "キム・ジウです。",
+      "reading": "きむ・じうです。",
+      "meaning": "김지우입니다.",
+      "group": "회화",
+      "tip": "대사의 뜻을 떠올리며 긴 모음, 작은 っ, 문장 끝의 억양과 자연스러운 연결을 연습하세요.",
+      "audio": "audio/1_7_3.mp3",
+      "activityCode": "01|020",
+      "activityTitle": "교실에서 첫인사",
+      "kind": "conversation",
+      "speaker": "ジウ",
+      "sourcePage": "01|020 · 교실에서 첫인사",
+      "sourceFile": "020_01.html",
+      "audioBundle": {
+        "path": "audio/activities/u1-020.bin",
+        "offset": 104748,
+        "length": 42030
+      }
+    },
+    {
+      "id": "u1-020_01-04",
+      "text": "はじめまして。",
+      "reading": "はじめまして。",
+      "meaning": "처음 뵙겠습니다.",
+      "group": "회화",
+      "tip": "대사의 뜻을 떠올리며 긴 모음, 작은 っ, 문장 끝의 억양과 자연스러운 연결을 연습하세요.",
+      "audio": "audio/1_7_4.mp3",
+      "activityCode": "01|020",
+      "activityTitle": "교실에서 첫인사",
+      "kind": "conversation",
+      "speaker": "たくみ",
+      "sourcePage": "01|020 · 교실에서 첫인사",
+      "sourceFile": "020_01.html",
+      "audioBundle": {
+        "path": "audio/activities/u1-020.bin",
+        "offset": 146778,
+        "length": 40776
+      }
+    },
+    {
+      "id": "u1-020_01-05",
+      "text": "中村 たくみです。",
+      "reading": "なかむら たくみです。",
+      "meaning": "나카무라 다쿠미입니다.",
+      "group": "회화",
+      "tip": "대사의 뜻을 떠올리며 긴 모음, 작은 っ, 문장 끝의 억양과 자연스러운 연결을 연습하세요.",
+      "audio": "audio/1_7_5.mp3",
+      "activityCode": "01|020",
+      "activityTitle": "교실에서 첫인사",
+      "kind": "conversation",
+      "speaker": "たくみ",
+      "sourcePage": "01|020 · 교실에서 첫인사",
+      "sourceFile": "020_01.html",
+      "audioBundle": {
+        "path": "audio/activities/u1-020.bin",
+        "offset": 187554,
+        "length": 62718
+      }
+    },
+    {
+      "id": "u1-020_01-06",
+      "text": "ええと、キムさん？ ジウちゃん？",
+      "reading": "ええと、きむさん？ じうちゃん？",
+      "meaning": "음, 김 씨? 지우 짱?",
+      "group": "회화",
+      "tip": "대사의 뜻을 떠올리며 긴 모음, 작은 っ, 문장 끝의 억양과 자연스러운 연결을 연습하세요.",
+      "audio": "audio/1_7_6.mp3",
+      "activityCode": "01|020",
+      "activityTitle": "교실에서 첫인사",
+      "kind": "conversation",
+      "speaker": "たくみ",
+      "sourcePage": "01|020 · 교실에서 첫인사",
+      "sourceFile": "020_01.html",
+      "audioBundle": {
+        "path": "audio/activities/u1-020.bin",
+        "offset": 250272,
+        "length": 118516
+      }
+    },
+    {
+      "id": "u1-020_01-07",
+      "text": "ジウちゃんで お願いします。",
+      "reading": "じうちゃんで おねがいします。",
+      "meaning": "지우 짱으로 불러 주세요.",
+      "group": "회화",
+      "tip": "대사의 뜻을 떠올리며 긴 모음, 작은 っ, 문장 끝의 억양과 자연스러운 연결을 연습하세요.",
+      "audio": "audio/1_7_7.mp3",
+      "activityCode": "01|020",
+      "activityTitle": "교실에서 첫인사",
+      "kind": "conversation",
+      "speaker": "ジウ",
+      "sourcePage": "01|020 · 교실에서 첫인사",
+      "sourceFile": "020_01.html",
+      "audioBundle": {
+        "path": "audio/activities/u1-020.bin",
+        "offset": 368788,
+        "length": 79646
+      }
+    },
+    {
+      "id": "u1-020_01-08",
+      "text": "ジウちゃんですね。",
+      "reading": "じうちゃんですね。",
+      "meaning": "지우 짱이군요.",
+      "group": "회화",
+      "tip": "대사의 뜻을 떠올리며 긴 모음, 작은 っ, 문장 끝의 억양과 자연스러운 연결을 연습하세요.",
+      "audio": "audio/1_7_8.mp3",
+      "activityCode": "01|020",
+      "activityTitle": "교실에서 첫인사",
+      "kind": "conversation",
+      "speaker": "たくみ",
+      "sourcePage": "01|020 · 교실에서 첫인사",
+      "sourceFile": "020_01.html",
+      "audioBundle": {
+        "path": "audio/activities/u1-020.bin",
+        "offset": 448434,
+        "length": 52687
+      }
+    },
+    {
+      "id": "u1-020_01-09",
+      "text": "じゃあ、ぼくも たくみで お願いします。",
+      "reading": "じゃあ、ぼくも たくみで おねがいします。",
+      "meaning": "그럼, 저도 다쿠미로 불러 주세요.",
+      "group": "회화",
+      "tip": "대사의 뜻을 떠올리며 긴 모음, 작은 っ, 문장 끝의 억양과 자연스러운 연결을 연습하세요.",
+      "audio": "audio/1_7_9.mp3",
+      "activityCode": "01|020",
+      "activityTitle": "교실에서 첫인사",
+      "kind": "conversation",
+      "speaker": "たくみ",
+      "sourcePage": "01|020 · 교실에서 첫인사",
+      "sourceFile": "020_01.html",
+      "audioBundle": {
+        "path": "audio/activities/u1-020b.bin",
+        "offset": 0,
+        "length": 127293
+      }
+    },
+    {
+      "id": "u1-020_01-10",
+      "text": "じゃあ、たくみくん、これから よろしく お願いします。",
+      "reading": "じゃあ、たくみくん、これから よろしく おねがいします。",
+      "meaning": "그럼 다쿠미 군, 앞으로 잘 부탁드립니다.",
+      "group": "회화",
+      "tip": "대사의 뜻을 떠올리며 긴 모음, 작은 っ, 문장 끝의 억양과 자연스러운 연결을 연습하세요.",
+      "audio": "audio/1_7_10.mp3",
+      "activityCode": "01|020",
+      "activityTitle": "교실에서 첫인사",
+      "kind": "conversation",
+      "speaker": "ジウ",
+      "sourcePage": "01|020 · 교실에서 첫인사",
+      "sourceFile": "020_01.html",
+      "audioBundle": {
+        "path": "audio/activities/u1-020b.bin",
+        "offset": 127293,
+        "length": 136070
+      }
+    },
+    {
+      "id": "u1-020_01-11",
+      "text": "こちらこそ どうぞ よろしく お願いします。",
+      "reading": "こちらこそ どうぞ よろしく おねがいします。",
+      "meaning": "저야말로 아무쪼록 잘 부탁드립니다.",
+      "group": "회화",
+      "tip": "대사의 뜻을 떠올리며 긴 모음, 작은 っ, 문장 끝의 억양과 자연스러운 연결을 연습하세요.",
+      "audio": "audio/1_7_11.mp3",
+      "activityCode": "01|020",
+      "activityTitle": "교실에서 첫인사",
+      "kind": "conversation",
+      "speaker": "たくみ",
+      "sourcePage": "01|020 · 교실에서 첫인사",
+      "sourceFile": "020_01.html",
+      "audioBundle": {
+        "path": "audio/activities/u1-020b.bin",
+        "offset": 263363,
+        "length": 137324
+      }
+    },
+    {
+      "id": "u1-022_01-01",
+      "text": "いってきます。",
+      "reading": "いってきます。",
+      "meaning": "다녀오겠습니다.",
+      "group": "상황 인사",
+      "tip": "대사의 뜻을 떠올리며 긴 모음, 작은 っ, 문장 끝의 억양과 자연스러운 연결을 연습하세요.",
+      "audio": "audio/1_8_1.mp3",
+      "activityCode": "01|022",
+      "activityTitle": "하루 일과 인사",
+      "kind": "conversation",
+      "speaker": "지우",
+      "sourcePage": "01|022 · 하루 일과 인사",
+      "sourceFile": "022_01.html",
+      "audioBundle": {
+        "path": "audio/activities/u1-022.bin",
+        "offset": 0,
+        "length": 49553
+      }
+    },
+    {
+      "id": "u1-022_01-02",
+      "text": "いってらっしゃい。",
+      "reading": "いってらっしゃい。",
+      "meaning": "다녀오세요.",
+      "group": "상황 인사",
+      "tip": "대사의 뜻을 떠올리며 긴 모음, 작은 っ, 문장 끝의 억양과 자연스러운 연결을 연습하세요.",
+      "audio": "audio/1_8_2.mp3",
+      "activityCode": "01|022",
+      "activityTitle": "하루 일과 인사",
+      "kind": "conversation",
+      "speaker": "할머니",
+      "sourcePage": "01|022 · 하루 일과 인사",
+      "sourceFile": "022_01.html",
+      "audioBundle": {
+        "path": "audio/activities/u1-022.bin",
+        "offset": 49553,
+        "length": 50807
+      }
+    },
+    {
+      "id": "u1-022_01-03",
+      "text": "ただいま。",
+      "reading": "ただいま。",
+      "meaning": "다녀왔습니다.",
+      "group": "상황 인사",
+      "tip": "대사의 뜻을 떠올리며 긴 모음, 작은 っ, 문장 끝의 억양과 자연스러운 연결을 연습하세요.",
+      "audio": "audio/1_8_3.mp3",
+      "activityCode": "01|022",
+      "activityTitle": "하루 일과 인사",
+      "kind": "conversation",
+      "speaker": "지우",
+      "sourcePage": "01|022 · 하루 일과 인사",
+      "sourceFile": "022_01.html",
+      "audioBundle": {
+        "path": "audio/activities/u1-022.bin",
+        "offset": 100360,
+        "length": 44537
+      }
+    },
+    {
+      "id": "u1-022_01-04",
+      "text": "おかえりなさい。",
+      "reading": "おかえりなさい。",
+      "meaning": "어서 와요.",
+      "group": "상황 인사",
+      "tip": "대사의 뜻을 떠올리며 긴 모음, 작은 っ, 문장 끝의 억양과 자연스러운 연결을 연습하세요.",
+      "audio": "audio/1_8_4.mp3",
+      "activityCode": "01|022",
+      "activityTitle": "하루 일과 인사",
+      "kind": "conversation",
+      "speaker": "할머니",
+      "sourcePage": "01|022 · 하루 일과 인사",
+      "sourceFile": "022_01.html",
+      "audioBundle": {
+        "path": "audio/activities/u1-022.bin",
+        "offset": 144897,
+        "length": 52061
+      }
+    },
+    {
+      "id": "u1-022_01-05",
+      "text": "おはよう。",
+      "reading": "おはよう。",
+      "meaning": "안녕. (아침 인사)",
+      "group": "상황 인사",
+      "tip": "대사의 뜻을 떠올리며 긴 모음, 작은 っ, 문장 끝의 억양과 자연스러운 연결을 연습하세요.",
+      "audio": "audio/1_8_5.mp3",
+      "activityCode": "01|022",
+      "activityTitle": "하루 일과 인사",
+      "kind": "conversation",
+      "speaker": "지우",
+      "sourcePage": "01|022 · 하루 일과 인사",
+      "sourceFile": "022_01.html",
+      "audioBundle": {
+        "path": "audio/activities/u1-022.bin",
+        "offset": 196958,
+        "length": 42030
+      }
+    },
+    {
+      "id": "u1-022_01-06",
+      "text": "おはよう。",
+      "reading": "おはよう。",
+      "meaning": "안녕. (아침 인사)",
+      "group": "상황 인사",
+      "tip": "대사의 뜻을 떠올리며 긴 모음, 작은 っ, 문장 끝의 억양과 자연스러운 연결을 연습하세요.",
+      "audio": "audio/1_8_6.mp3",
+      "activityCode": "01|022",
+      "activityTitle": "하루 일과 인사",
+      "kind": "conversation",
+      "speaker": "다쿠미",
+      "sourcePage": "01|022 · 하루 일과 인사",
+      "sourceFile": "022_01.html",
+      "audioBundle": {
+        "path": "audio/activities/u1-022.bin",
+        "offset": 238988,
+        "length": 37641
+      }
+    },
+    {
+      "id": "u1-022_01-07",
+      "text": "ジウちゃん、じゃあね。",
+      "reading": "じうちゃん、じゃあね。",
+      "meaning": "지우 짱, 또 봐.",
+      "group": "상황 인사",
+      "tip": "대사의 뜻을 떠올리며 긴 모음, 작은 っ, 문장 끝의 억양과 자연스러운 연결을 연습하세요.",
+      "audio": "audio/1_8_7.mp3",
+      "activityCode": "01|022",
+      "activityTitle": "하루 일과 인사",
+      "kind": "conversation",
+      "speaker": "다쿠미",
+      "sourcePage": "01|022 · 하루 일과 인사",
+      "sourceFile": "022_01.html",
+      "audioBundle": {
+        "path": "audio/activities/u1-022.bin",
+        "offset": 276629,
+        "length": 63972
+      }
+    },
+    {
+      "id": "u1-022_01-08",
+      "text": "たくみくん、バイバイ。",
+      "reading": "たくみくん、ばいばい。",
+      "meaning": "다쿠미 군, 잘 가.",
+      "group": "상황 인사",
+      "tip": "대사의 뜻을 떠올리며 긴 모음, 작은 っ, 문장 끝의 억양과 자연스러운 연결을 연습하세요.",
+      "audio": "audio/1_8_8.mp3",
+      "activityCode": "01|022",
+      "activityTitle": "하루 일과 인사",
+      "kind": "conversation",
+      "speaker": "지우",
+      "sourcePage": "01|022 · 하루 일과 인사",
+      "sourceFile": "022_01.html",
+      "audioBundle": {
+        "path": "audio/activities/u1-022.bin",
+        "offset": 340601,
+        "length": 67734
+      }
+    },
+    {
+      "id": "u1-022_01-09",
+      "text": "先生、 おはようございます。",
+      "reading": "せんせい、 おはようございます。",
+      "meaning": "선생님, 안녕하세요. (아침 인사)",
+      "group": "상황 인사",
+      "tip": "대사의 뜻을 떠올리며 긴 모음, 작은 っ, 문장 끝의 억양과 자연스러운 연결을 연습하세요.",
+      "audio": "audio/1_8_9.mp3",
+      "activityCode": "01|022",
+      "activityTitle": "하루 일과 인사",
+      "kind": "conversation",
+      "speaker": "하루토",
+      "sourcePage": "01|022 · 하루 일과 인사",
+      "sourceFile": "022_01.html",
+      "audioBundle": {
+        "path": "audio/activities/u1-022.bin",
+        "offset": 408335,
+        "length": 83407
+      }
+    },
+    {
+      "id": "u1-022_01-10",
+      "text": "山下くん、おはよう。",
+      "reading": "やましたくん、おはよう。",
+      "meaning": "야마시타 군, 안녕.",
+      "group": "상황 인사",
+      "tip": "대사의 뜻을 떠올리며 긴 모음, 작은 っ, 문장 끝의 억양과 자연스러운 연결을 연습하세요.",
+      "audio": "audio/1_8_10.mp3",
+      "activityCode": "01|022",
+      "activityTitle": "하루 일과 인사",
+      "kind": "conversation",
+      "speaker": "선생님",
+      "sourcePage": "01|022 · 하루 일과 인사",
+      "sourceFile": "022_01.html",
+      "audioBundle": {
+        "path": "audio/activities/u1-022.bin",
+        "offset": 491742,
+        "length": 71496
+      }
+    },
+    {
+      "id": "u1-022_01-11",
+      "text": "山下くん、また 明日。",
+      "reading": "やましたくん、また あした。",
+      "meaning": "야마시타 군, 내일 또 보자.",
+      "group": "상황 인사",
+      "tip": "대사의 뜻을 떠올리며 긴 모음, 작은 っ, 문장 끝의 억양과 자연스러운 연결을 연습하세요.",
+      "audio": "audio/1_8_11.mp3",
+      "activityCode": "01|022",
+      "activityTitle": "하루 일과 인사",
+      "kind": "conversation",
+      "speaker": "선생님",
+      "sourcePage": "01|022 · 하루 일과 인사",
+      "sourceFile": "022_01.html",
+      "audioBundle": {
+        "path": "audio/activities/u1-022b.bin",
+        "offset": 0,
+        "length": 76511
+      }
+    },
+    {
+      "id": "u1-022_01-12",
+      "text": "先生、さようなら。",
+      "reading": "せんせい、さようなら。",
+      "meaning": "선생님, 안녕히 계세요.",
+      "group": "상황 인사",
+      "tip": "대사의 뜻을 떠올리며 긴 모음, 작은 っ, 문장 끝의 억양과 자연스러운 연결을 연습하세요.",
+      "audio": "audio/1_8_12.mp3",
+      "activityCode": "01|022",
+      "activityTitle": "하루 일과 인사",
+      "kind": "conversation",
+      "speaker": "하루토",
+      "sourcePage": "01|022 · 하루 일과 인사",
+      "sourceFile": "022_01.html",
+      "audioBundle": {
+        "path": "audio/activities/u1-022b.bin",
+        "offset": 76511,
+        "length": 75884
+      }
+    },
+    {
+      "id": "u1-023_01-01",
+      "text": "先生、こんにちは。",
+      "reading": "せんせい、こんにちは。",
+      "meaning": "선생님, 안녕하세요.",
+      "group": "상황 인사",
+      "tip": "대사의 뜻을 떠올리며 긴 모음, 작은 っ, 문장 끝의 억양과 자연스러운 연결을 연습하세요.",
+      "audio": "audio/1_14_1.mp3",
+      "activityCode": "02|023",
+      "activityTitle": "방문·소개·저녁 인사",
+      "kind": "conversation",
+      "speaker": "사쿠라",
+      "sourcePage": "02|023 · 방문·소개·저녁 인사",
+      "sourceFile": "023_01.html",
+      "audioBundle": {
+        "path": "audio/activities/u1-023.bin",
+        "offset": 0,
+        "length": 65853
+      }
+    },
+    {
+      "id": "u1-023_01-02",
+      "text": "はい、こんにちは。",
+      "reading": "はい、こんにちは。",
+      "meaning": "네, 안녕하세요.",
+      "group": "상황 인사",
+      "tip": "대사의 뜻을 떠올리며 긴 모음, 작은 っ, 문장 끝의 억양과 자연스러운 연결을 연습하세요.",
+      "audio": "audio/1_14_2.mp3",
+      "activityCode": "02|023",
+      "activityTitle": "방문·소개·저녁 인사",
+      "kind": "conversation",
+      "speaker": "선생님",
+      "sourcePage": "02|023 · 방문·소개·저녁 인사",
+      "sourceFile": "023_01.html",
+      "audioBundle": {
+        "path": "audio/activities/u1-023.bin",
+        "offset": 65853,
+        "length": 60211
+      }
+    },
+    {
+      "id": "u1-023_01-03",
+      "text": "おじゃまします。",
+      "reading": "おじゃまします。",
+      "meaning": "실례하겠습니다. (방문 인사)",
+      "group": "상황 인사",
+      "tip": "대사의 뜻을 떠올리며 긴 모음, 작은 っ, 문장 끝의 억양과 자연스러운 연결을 연습하세요.",
+      "audio": "audio/1_14_3.mp3",
+      "activityCode": "02|023",
+      "activityTitle": "방문·소개·저녁 인사",
+      "kind": "conversation",
+      "speaker": "지우",
+      "sourcePage": "02|023 · 방문·소개·저녁 인사",
+      "sourceFile": "023_01.html",
+      "audioBundle": {
+        "path": "audio/activities/u1-023.bin",
+        "offset": 126064,
+        "length": 48926
+      }
+    },
+    {
+      "id": "u1-023_01-04",
+      "text": "いらっしゃい。",
+      "reading": "いらっしゃい。",
+      "meaning": "어서 와요.",
+      "group": "상황 인사",
+      "tip": "대사의 뜻을 떠올리며 긴 모음, 작은 っ, 문장 끝의 억양과 자연스러운 연결을 연습하세요.",
+      "audio": "audio/1_14_4.mp3",
+      "activityCode": "02|023",
+      "activityTitle": "방문·소개·저녁 인사",
+      "kind": "conversation",
+      "speaker": "사쿠라 어머니",
+      "sourcePage": "02|023 · 방문·소개·저녁 인사",
+      "sourceFile": "023_01.html",
+      "audioBundle": {
+        "path": "audio/activities/u1-023.bin",
+        "offset": 174990,
+        "length": 26983
+      }
+    },
+    {
+      "id": "u1-023_01-05",
+      "text": "どうぞ。",
+      "reading": "どうぞ。",
+      "meaning": "들어오세요.",
+      "group": "상황 인사",
+      "tip": "대사의 뜻을 떠올리며 긴 모음, 작은 っ, 문장 끝의 억양과 자연스러운 연결을 연습하세요.",
+      "audio": "audio/1_14_5.mp3",
+      "activityCode": "02|023",
+      "activityTitle": "방문·소개·저녁 인사",
+      "kind": "conversation",
+      "speaker": "사쿠라 어머니",
+      "sourcePage": "02|023 · 방문·소개·저녁 인사",
+      "sourceFile": "023_01.html",
+      "audioBundle": {
+        "path": "audio/activities/u1-023.bin",
+        "offset": 201973,
+        "length": 23221
+      }
+    },
+    {
+      "id": "u1-023_01-06",
+      "text": "こちらは 私の 父です。",
+      "reading": "こちらは わたしの ちちです。",
+      "meaning": "이쪽은 저의 아버지입니다.",
+      "group": "상황 인사",
+      "tip": "대사의 뜻을 떠올리며 긴 모음, 작은 っ, 문장 끝의 억양과 자연스러운 연결을 연습하세요.",
+      "audio": "audio/1_14_6.mp3",
+      "activityCode": "02|023",
+      "activityTitle": "방문·소개·저녁 인사",
+      "kind": "conversation",
+      "speaker": "사쿠라",
+      "sourcePage": "02|023 · 방문·소개·저녁 인사",
+      "sourceFile": "023_01.html",
+      "audioBundle": {
+        "path": "audio/activities/u1-023.bin",
+        "offset": 225194,
+        "length": 82154
+      }
+    },
+    {
+      "id": "u1-023_01-07",
+      "text": "おばさん、こんばんは。",
+      "reading": "おばさん、こんばんは。",
+      "meaning": "아주머니, 안녕하세요. (저녁 인사)",
+      "group": "상황 인사",
+      "tip": "대사의 뜻을 떠올리며 긴 모음, 작은 っ, 문장 끝의 억양과 자연스러운 연결을 연습하세요.",
+      "audio": "audio/1_14_7.mp3",
+      "activityCode": "02|023",
+      "activityTitle": "방문·소개·저녁 인사",
+      "kind": "conversation",
+      "speaker": "지우",
+      "sourcePage": "02|023 · 방문·소개·저녁 인사",
+      "sourceFile": "023_01.html",
+      "audioBundle": {
+        "path": "audio/activities/u1-023.bin",
+        "offset": 307348,
+        "length": 57076
+      }
+    },
+    {
+      "id": "u1-023_01-08",
+      "text": "ジウちゃん、こんばんは。",
+      "reading": "じうちゃん、こんばんは。",
+      "meaning": "지우 짱, 안녕. (저녁 인사)",
+      "group": "상황 인사",
+      "tip": "대사의 뜻을 떠올리며 긴 모음, 작은 っ, 문장 끝의 억양과 자연스러운 연결을 연습하세요.",
+      "audio": "audio/1_14_8.mp3",
+      "activityCode": "02|023",
+      "activityTitle": "방문·소개·저녁 인사",
+      "kind": "conversation",
+      "speaker": "친구 엄마",
+      "sourcePage": "02|023 · 방문·소개·저녁 인사",
+      "sourceFile": "023_01.html",
+      "audioBundle": {
+        "path": "audio/activities/u1-023.bin",
+        "offset": 364424,
+        "length": 65226
+      }
+    },
+    {
+      "id": "u1-023_01-09",
+      "text": "おばあちゃん、 おやすみなさい。",
+      "reading": "おばあちゃん、 おやすみなさい。",
+      "meaning": "할머니, 안녕히 주무세요.",
+      "group": "상황 인사",
+      "tip": "대사의 뜻을 떠올리며 긴 모음, 작은 っ, 문장 끝의 억양과 자연스러운 연결을 연습하세요.",
+      "audio": "audio/1_14_9.mp3",
+      "activityCode": "02|023",
+      "activityTitle": "방문·소개·저녁 인사",
+      "kind": "conversation",
+      "speaker": "지우",
+      "sourcePage": "02|023 · 방문·소개·저녁 인사",
+      "sourceFile": "023_01.html",
+      "audioBundle": {
+        "path": "audio/activities/u1-023.bin",
+        "offset": 429650,
+        "length": 80900
+      }
+    },
+    {
+      "id": "u1-023_01-10",
+      "text": "ジウちゃん、 おやすみ。",
+      "reading": "じうちゃん、 おやすみ。",
+      "meaning": "지우 짱, 잘 자.",
+      "group": "상황 인사",
+      "tip": "대사의 뜻을 떠올리며 긴 모음, 작은 っ, 문장 끝의 억양과 자연스러운 연결을 연습하세요.",
+      "audio": "audio/1_14_10.mp3",
+      "activityCode": "02|023",
+      "activityTitle": "방문·소개·저녁 인사",
+      "kind": "conversation",
+      "speaker": "할머니",
+      "sourcePage": "02|023 · 방문·소개·저녁 인사",
+      "sourceFile": "023_01.html",
+      "audioBundle": {
+        "path": "audio/activities/u1-023.bin",
+        "offset": 510550,
+        "length": 76511
+      }
+    },
+    {
+      "id": "u1-024_01-01",
+      "text": "はじめまして。",
+      "reading": "はじめまして。",
+      "meaning": "처음 뵙겠습니다.",
+      "group": "회화",
+      "tip": "대사의 뜻을 떠올리며 긴 모음, 작은 っ, 문장 끝의 억양과 자연스러운 연결을 연습하세요.",
+      "audio": "audio/1_19_1.mp3",
+      "activityCode": "01|024",
+      "activityTitle": "자기소개하기",
+      "kind": "conversation",
+      "speaker": "지우",
+      "sourcePage": "01|024 · 자기소개하기",
+      "sourceFile": "024_01.html",
+      "audioBundle": {
+        "path": "audio/activities/u1-024.bin",
+        "offset": 0,
+        "length": 41403
+      }
+    },
+    {
+      "id": "u1-024_01-02",
+      "text": "キム・ジウです。",
+      "reading": "きむ・じうです。",
+      "meaning": "김지우입니다.",
+      "group": "회화",
+      "tip": "대사의 뜻을 떠올리며 긴 모음, 작은 っ, 문장 끝의 억양과 자연스러운 연결을 연습하세요.",
+      "audio": "audio/1_19_2.mp3",
+      "activityCode": "01|024",
+      "activityTitle": "자기소개하기",
+      "kind": "conversation",
+      "speaker": "지우",
+      "sourcePage": "01|024 · 자기소개하기",
+      "sourceFile": "024_01.html",
+      "audioBundle": {
+        "path": "audio/activities/u1-024.bin",
+        "offset": 41403,
+        "length": 39522
+      }
+    },
+    {
+      "id": "u1-024_01-03",
+      "text": "韓国から 来ました。",
+      "reading": "かんこくから きました。",
+      "meaning": "한국에서 왔습니다.",
+      "group": "회화",
+      "tip": "대사의 뜻을 떠올리며 긴 모음, 작은 っ, 문장 끝의 억양과 자연스러운 연결을 연습하세요.",
+      "audio": "audio/1_19_3.mp3",
+      "activityCode": "01|024",
+      "activityTitle": "자기소개하기",
+      "kind": "conversation",
+      "speaker": "지우",
+      "sourcePage": "01|024 · 자기소개하기",
+      "sourceFile": "024_01.html",
+      "audioBundle": {
+        "path": "audio/activities/u1-024.bin",
+        "offset": 80925,
+        "length": 50180
+      }
+    },
+    {
+      "id": "u1-024_01-04",
+      "text": "私の 家族は そふ、そぼ、父、母、私です。",
+      "reading": "わたしの かぞくは そふ、そぼ、ちち、はは、わたしです。",
+      "meaning": "우리 가족은 할아버지, 할머니, 아버지, 어머니, 저입니다.",
+      "group": "회화",
+      "tip": "대사의 뜻을 떠올리며 긴 모음, 작은 っ, 문장 끝의 억양과 자연스러운 연결을 연습하세요.",
+      "audio": "audio/1_19_4.mp3",
+      "activityCode": "01|024",
+      "activityTitle": "자기소개하기",
+      "kind": "conversation",
+      "speaker": "지우",
+      "sourcePage": "01|024 · 자기소개하기",
+      "sourceFile": "024_01.html",
+      "audioBundle": {
+        "path": "audio/activities/u1-024.bin",
+        "offset": 131105,
+        "length": 168044
+      }
+    },
+    {
+      "id": "u1-024_01-05",
+      "text": "父と 母は 韓国に、そふと そぼは 日本に います。",
+      "reading": "ちちと ははは かんこくに、そふと そぼは にほんに います。",
+      "meaning": "아버지와 어머니는 한국에, 할아버지와 할머니는 일본에 계십니다.",
+      "group": "회화",
+      "tip": "대사의 뜻을 떠올리며 긴 모음, 작은 っ, 문장 끝의 억양과 자연스러운 연결을 연습하세요.",
+      "audio": "audio/1_19_5.mp3",
+      "activityCode": "01|024",
+      "activityTitle": "자기소개하기",
+      "kind": "conversation",
+      "speaker": "지우",
+      "sourcePage": "01|024 · 자기소개하기",
+      "sourceFile": "024_01.html",
+      "audioBundle": {
+        "path": "audio/activities/u1-024.bin",
+        "offset": 299149,
+        "length": 155505
+      }
+    },
+    {
+      "id": "u1-024_01-06",
+      "text": "犬の 名前は どんぐりです。",
+      "reading": "いぬの なまえは どんぐりです。",
+      "meaning": "개의 이름은 돈구리입니다.",
+      "group": "회화",
+      "tip": "대사의 뜻을 떠올리며 긴 모음, 작은 っ, 문장 끝의 억양과 자연스러운 연결을 연습하세요.",
+      "audio": "audio/1_19_6.mp3",
+      "activityCode": "01|024",
+      "activityTitle": "자기소개하기",
+      "kind": "conversation",
+      "speaker": "지우",
+      "sourcePage": "01|024 · 자기소개하기",
+      "sourceFile": "024_01.html",
+      "audioBundle": {
+        "path": "audio/activities/u1-024.bin",
+        "offset": 454654,
+        "length": 73376
+      }
+    },
+    {
+      "id": "u1-024_01-07",
+      "text": "よろしく お願いします。",
+      "reading": "よろしく おねがいします。",
+      "meaning": "잘 부탁드립니다.",
+      "group": "회화",
+      "tip": "대사의 뜻을 떠올리며 긴 모음, 작은 っ, 문장 끝의 억양과 자연스러운 연결을 연습하세요.",
+      "audio": "audio/1_19_7.mp3",
+      "activityCode": "01|024",
+      "activityTitle": "자기소개하기",
+      "kind": "conversation",
+      "speaker": "지우",
+      "sourcePage": "01|024 · 자기소개하기",
+      "sourceFile": "024_01.html",
+      "audioBundle": {
+        "path": "audio/activities/u1-024.bin",
+        "offset": 528030,
+        "length": 57076
+      }
+    },
+    {
+      "id": "u1-025_01-01",
+      "text": "ただいま。",
+      "reading": "ただいま。",
+      "meaning": "다녀왔습니다.",
+      "group": "회화",
+      "tip": "대사의 뜻을 떠올리며 긴 모음, 작은 っ, 문장 끝의 억양과 자연스러운 연결을 연습하세요.",
+      "audio": "audio/1_20_1.mp3",
+      "activityCode": "02|025",
+      "activityTitle": "가족에게 친구 소개하기",
+      "kind": "conversation",
+      "speaker": "사쿠라",
+      "sourcePage": "02|025 · 가족에게 친구 소개하기",
+      "sourceFile": "025_01.html",
+      "audioBundle": {
+        "path": "audio/activities/u1-025.bin",
+        "offset": 0,
+        "length": 37014
+      }
+    },
+    {
+      "id": "u1-025_01-02",
+      "text": "おかえり。",
+      "reading": "おかえり。",
+      "meaning": "어서 와.",
+      "group": "회화",
+      "tip": "대사의 뜻을 떠올리며 긴 모음, 작은 っ, 문장 끝의 억양과 자연스러운 연결을 연습하세요.",
+      "audio": "audio/1_20_2.mp3",
+      "activityCode": "02|025",
+      "activityTitle": "가족에게 친구 소개하기",
+      "kind": "conversation",
+      "speaker": "사쿠라 어머니",
+      "sourcePage": "02|025 · 가족에게 친구 소개하기",
+      "sourceFile": "025_01.html",
+      "audioBundle": {
+        "path": "audio/activities/u1-025.bin",
+        "offset": 37014,
+        "length": 37014
+      }
+    },
+    {
+      "id": "u1-025_01-03",
+      "text": "お母さん、こちらは 同じ クラスの キム・ジウさん。",
+      "reading": "おかあさん、こちらは おなじ くらすの きむ・じうさん。",
+      "meaning": "엄마, 이쪽은 같은 반 김지우 씨예요.",
+      "group": "회화",
+      "tip": "대사의 뜻을 떠올리며 긴 모음, 작은 っ, 문장 끝의 억양과 자연스러운 연결을 연습하세요.",
+      "audio": "audio/1_20_3.mp3",
+      "activityCode": "02|025",
+      "activityTitle": "가족에게 친구 소개하기",
+      "kind": "conversation",
+      "speaker": "사쿠라",
+      "sourcePage": "02|025 · 가족에게 친구 소개하기",
+      "sourceFile": "025_01.html",
+      "audioBundle": {
+        "path": "audio/activities/u1-025.bin",
+        "offset": 74028,
+        "length": 134190
+      }
+    },
+    {
+      "id": "u1-025_01-04",
+      "text": "はじめまして。",
+      "reading": "はじめまして。",
+      "meaning": "처음 뵙겠습니다.",
+      "group": "회화",
+      "tip": "대사의 뜻을 떠올리며 긴 모음, 작은 っ, 문장 끝의 억양과 자연스러운 연결을 연습하세요.",
+      "audio": "audio/1_20_4.mp3",
+      "activityCode": "02|025",
+      "activityTitle": "가족에게 친구 소개하기",
+      "kind": "conversation",
+      "speaker": "지우",
+      "sourcePage": "02|025 · 가족에게 친구 소개하기",
+      "sourceFile": "025_01.html",
+      "audioBundle": {
+        "path": "audio/activities/u1-025.bin",
+        "offset": 208218,
+        "length": 42656
+      }
+    },
+    {
+      "id": "u1-025_01-05",
+      "text": "キム・ジウです。",
+      "reading": "きむ・じうです。",
+      "meaning": "김지우입니다.",
+      "group": "회화",
+      "tip": "대사의 뜻을 떠올리며 긴 모음, 작은 っ, 문장 끝의 억양과 자연스러운 연결을 연습하세요.",
+      "audio": "audio/1_20_5.mp3",
+      "activityCode": "02|025",
+      "activityTitle": "가족에게 친구 소개하기",
+      "kind": "conversation",
+      "speaker": "지우",
+      "sourcePage": "02|025 · 가족에게 친구 소개하기",
+      "sourceFile": "025_01.html",
+      "audioBundle": {
+        "path": "audio/activities/u1-025.bin",
+        "offset": 250874,
+        "length": 37014
+      }
+    },
+    {
+      "id": "u1-025_01-06",
+      "text": "韓国から 来ました。",
+      "reading": "かんこくから きました。",
+      "meaning": "한국에서 왔습니다.",
+      "group": "회화",
+      "tip": "대사의 뜻을 떠올리며 긴 모음, 작은 っ, 문장 끝의 억양과 자연스러운 연결을 연습하세요.",
+      "audio": "audio/1_20_6.mp3",
+      "activityCode": "02|025",
+      "activityTitle": "가족에게 친구 소개하기",
+      "kind": "conversation",
+      "speaker": "지우",
+      "sourcePage": "02|025 · 가족에게 친구 소개하기",
+      "sourceFile": "025_01.html",
+      "audioBundle": {
+        "path": "audio/activities/u1-025.bin",
+        "offset": 287888,
+        "length": 60838
+      }
+    },
+    {
+      "id": "u1-025_01-07",
+      "text": "はじめまして。",
+      "reading": "はじめまして。",
+      "meaning": "처음 뵙겠습니다.",
+      "group": "회화",
+      "tip": "대사의 뜻을 떠올리며 긴 모음, 작은 っ, 문장 끝의 억양과 자연스러운 연결을 연습하세요.",
+      "audio": "audio/1_20_7.mp3",
+      "activityCode": "02|025",
+      "activityTitle": "가족에게 친구 소개하기",
+      "kind": "conversation",
+      "speaker": "사쿠라 어머니",
+      "sourcePage": "02|025 · 가족에게 친구 소개하기",
+      "sourceFile": "025_01.html",
+      "audioBundle": {
+        "path": "audio/activities/u1-025.bin",
+        "offset": 348726,
+        "length": 34506
+      }
+    },
+    {
+      "id": "u1-025_01-08",
+      "text": "いらっしゃい。",
+      "reading": "いらっしゃい。",
+      "meaning": "어서 와요.",
+      "group": "회화",
+      "tip": "대사의 뜻을 떠올리며 긴 모음, 작은 っ, 문장 끝의 억양과 자연스러운 연결을 연습하세요.",
+      "audio": "audio/1_20_8.mp3",
+      "activityCode": "02|025",
+      "activityTitle": "가족에게 친구 소개하기",
+      "kind": "conversation",
+      "speaker": "사쿠라 어머니",
+      "sourcePage": "02|025 · 가족에게 친구 소개하기",
+      "sourceFile": "025_01.html",
+      "audioBundle": {
+        "path": "audio/activities/u1-025.bin",
+        "offset": 383232,
+        "length": 27610
+      }
+    },
+    {
+      "id": "u1-025_01-09",
+      "text": "どうぞ。",
+      "reading": "どうぞ。",
+      "meaning": "들어오세요.",
+      "group": "회화",
+      "tip": "대사의 뜻을 떠올리며 긴 모음, 작은 っ, 문장 끝의 억양과 자연스러운 연결을 연습하세요.",
+      "audio": "audio/1_20_9.mp3",
+      "activityCode": "02|025",
+      "activityTitle": "가족에게 친구 소개하기",
+      "kind": "conversation",
+      "speaker": "사쿠라 어머니",
+      "sourcePage": "02|025 · 가족에게 친구 소개하기",
+      "sourceFile": "025_01.html",
+      "audioBundle": {
+        "path": "audio/activities/u1-025.bin",
+        "offset": 410842,
+        "length": 29491
+      }
+    },
+    {
+      "id": "u1-025_01-10",
+      "text": "おじゃまします。",
+      "reading": "おじゃまします。",
+      "meaning": "실례하겠습니다.",
+      "group": "회화",
+      "tip": "대사의 뜻을 떠올리며 긴 모음, 작은 っ, 문장 끝의 억양과 자연스러운 연결을 연습하세요.",
+      "audio": "audio/1_20_10.mp3",
+      "activityCode": "02|025",
+      "activityTitle": "가족에게 친구 소개하기",
+      "kind": "conversation",
+      "speaker": "지우",
+      "sourcePage": "02|025 · 가족에게 친구 소개하기",
+      "sourceFile": "025_01.html",
+      "audioBundle": {
+        "path": "audio/activities/u1-025.bin",
+        "offset": 440333,
+        "length": 46418
+      }
+    },
+    {
+      "id": "u1-027_01-01",
+      "text": "一",
+      "reading": "いち",
+      "meaning": "1",
+      "group": "말하기 놀이",
+      "tip": "대사의 뜻을 떠올리며 긴 모음, 작은 っ, 문장 끝의 억양과 자연스러운 연결을 연습하세요.",
+      "audio": "audio/27_26.mp3",
+      "activityCode": "02|027",
+      "activityTitle": "함께 말하기 놀이",
+      "kind": "game",
+      "speaker": "",
+      "sourcePage": "02|027 · 함께 말하기 놀이",
+      "sourceFile": "027_01.html",
+      "audioBundle": {
+        "path": "audio/activities/u1-027.bin",
+        "offset": 0,
+        "length": 26230
+      }
+    },
+    {
+      "id": "u1-027_01-02",
+      "text": "先生",
+      "reading": "せんせい",
+      "meaning": "선생님",
+      "group": "말하기 놀이",
+      "tip": "대사의 뜻을 떠올리며 긴 모음, 작은 っ, 문장 끝의 억양과 자연스러운 연결을 연습하세요.",
+      "audio": "audio/27_10.mp3",
+      "activityCode": "02|027",
+      "activityTitle": "함께 말하기 놀이",
+      "kind": "game",
+      "speaker": "",
+      "sourcePage": "02|027 · 함께 말하기 놀이",
+      "sourceFile": "027_01.html",
+      "audioBundle": {
+        "path": "audio/activities/u1-027.bin",
+        "offset": 26230,
+        "length": 34171
+      }
+    },
+    {
+      "id": "u1-027_01-03",
+      "text": "ぼく",
+      "reading": "ぼく",
+      "meaning": "나 (남자)",
+      "group": "말하기 놀이",
+      "tip": "대사의 뜻을 떠올리며 긴 모음, 작은 っ, 문장 끝의 억양과 자연스러운 연결을 연습하세요.",
+      "audio": "audio/27_07.mp3",
+      "activityCode": "02|027",
+      "activityTitle": "함께 말하기 놀이",
+      "kind": "game",
+      "speaker": "",
+      "sourcePage": "02|027 · 함께 말하기 놀이",
+      "sourceFile": "027_01.html",
+      "audioBundle": {
+        "path": "audio/activities/u1-027.bin",
+        "offset": 60401,
+        "length": 27065
+      }
+    },
+    {
+      "id": "u1-027_01-04",
+      "text": "七",
+      "reading": "なな",
+      "meaning": "7",
+      "group": "말하기 놀이",
+      "tip": "대사의 뜻을 떠올리며 긴 모음, 작은 っ, 문장 끝의 억양과 자연스러운 연결을 연습하세요.",
+      "audio": "audio/27_08_2.mp3",
+      "activityCode": "02|027",
+      "activityTitle": "함께 말하기 놀이",
+      "kind": "game",
+      "speaker": "",
+      "sourcePage": "02|027 · 함께 말하기 놀이",
+      "sourceFile": "027_01.html",
+      "audioBundle": {
+        "path": "audio/activities/u1-027.bin",
+        "offset": 87466,
+        "length": 24437
+      }
+    },
+    {
+      "id": "u1-027_01-05",
+      "text": "八",
+      "reading": "はち",
+      "meaning": "8",
+      "group": "말하기 놀이",
+      "tip": "대사의 뜻을 떠올리며 긴 모음, 작은 っ, 문장 끝의 억양과 자연스러운 연결을 연습하세요.",
+      "audio": "audio/27_06.mp3",
+      "activityCode": "02|027",
+      "activityTitle": "함께 말하기 놀이",
+      "kind": "game",
+      "speaker": "",
+      "sourcePage": "02|027 · 함께 말하기 놀이",
+      "sourceFile": "027_01.html",
+      "audioBundle": {
+        "path": "audio/activities/u1-027.bin",
+        "offset": 111903,
+        "length": 27483
+      }
+    },
+    {
+      "id": "u1-027_01-06",
+      "text": "よろしくお願いします。",
+      "reading": "よろしくおねがいします",
+      "meaning": "잘 부탁드립니다",
+      "group": "말하기 놀이",
+      "tip": "대사의 뜻을 떠올리며 긴 모음, 작은 っ, 문장 끝의 억양과 자연스러운 연결을 연습하세요.",
+      "audio": "audio/27_05.mp3",
+      "activityCode": "02|027",
+      "activityTitle": "함께 말하기 놀이",
+      "kind": "game",
+      "speaker": "",
+      "sourcePage": "02|027 · 함께 말하기 놀이",
+      "sourceFile": "027_01.html",
+      "audioBundle": {
+        "path": "audio/activities/u1-027.bin",
+        "offset": 139386,
+        "length": 53815
+      }
+    },
+    {
+      "id": "u1-027_01-07",
+      "text": "友達",
+      "reading": "ともだち",
+      "meaning": "친구",
+      "group": "말하기 놀이",
+      "tip": "대사의 뜻을 떠올리며 긴 모음, 작은 っ, 문장 끝의 억양과 자연스러운 연결을 연습하세요.",
+      "audio": "audio/27_03.mp3",
+      "activityCode": "02|027",
+      "activityTitle": "함께 말하기 놀이",
+      "kind": "game",
+      "speaker": "",
+      "sourcePage": "02|027 · 함께 말하기 놀이",
+      "sourceFile": "027_01.html",
+      "audioBundle": {
+        "path": "audio/activities/u1-027.bin",
+        "offset": 193201,
+        "length": 32917
+      }
+    },
+    {
+      "id": "u1-027_01-08",
+      "text": "名前",
+      "reading": "なまえ",
+      "meaning": "이름",
+      "group": "말하기 놀이",
+      "tip": "대사의 뜻을 떠올리며 긴 모음, 작은 っ, 문장 끝의 억양과 자연스러운 연결을 연습하세요.",
+      "audio": "audio/27_04.mp3",
+      "activityCode": "02|027",
+      "activityTitle": "함께 말하기 놀이",
+      "kind": "game",
+      "speaker": "",
+      "sourcePage": "02|027 · 함께 말하기 놀이",
+      "sourceFile": "027_01.html",
+      "audioBundle": {
+        "path": "audio/activities/u1-027.bin",
+        "offset": 226118,
+        "length": 30409
+      }
+    },
+    {
+      "id": "u1-027_01-09",
+      "text": "母",
+      "reading": "はは",
+      "meaning": "엄마 (다른 사람에게 소개할 때)",
+      "group": "말하기 놀이",
+      "tip": "대사의 뜻을 떠올리며 긴 모음, 작은 っ, 문장 끝의 억양과 자연스러운 연결을 연습하세요.",
+      "audio": "audio/27_15.mp3",
+      "activityCode": "02|027",
+      "activityTitle": "함께 말하기 놀이",
+      "kind": "game",
+      "speaker": "",
+      "sourcePage": "02|027 · 함께 말하기 놀이",
+      "sourceFile": "027_01.html",
+      "audioBundle": {
+        "path": "audio/activities/u1-027.bin",
+        "offset": 256527,
+        "length": 26648
+      }
+    },
+    {
+      "id": "u1-027_01-10",
+      "text": "こちらこそ",
+      "reading": "こちらこそ",
+      "meaning": "저야말로",
+      "group": "말하기 놀이",
+      "tip": "대사의 뜻을 떠올리며 긴 모음, 작은 っ, 문장 끝의 억양과 자연스러운 연결을 연습하세요.",
+      "audio": "audio/27_16.mp3",
+      "activityCode": "02|027",
+      "activityTitle": "함께 말하기 놀이",
+      "kind": "game",
+      "speaker": "",
+      "sourcePage": "02|027 · 함께 말하기 놀이",
+      "sourceFile": "027_01.html",
+      "audioBundle": {
+        "path": "audio/activities/u1-027.bin",
+        "offset": 283175,
+        "length": 36261
+      }
+    },
+    {
+      "id": "u1-027_01-11",
+      "text": "九",
+      "reading": "きゅう",
+      "meaning": "9",
+      "group": "말하기 놀이",
+      "tip": "대사의 뜻을 떠올리며 긴 모음, 작은 っ, 문장 끝의 억양과 자연스러운 연결을 연습하세요.",
+      "audio": "audio/27_13_2.mp3",
+      "activityCode": "02|027",
+      "activityTitle": "함께 말하기 놀이",
+      "kind": "game",
+      "speaker": "",
+      "sourcePage": "02|027 · 함께 말하기 놀이",
+      "sourceFile": "027_01.html",
+      "audioBundle": {
+        "path": "audio/activities/u1-027.bin",
+        "offset": 319436,
+        "length": 20370
+      }
+    },
+    {
+      "id": "u1-027_01-12",
+      "text": "家族",
+      "reading": "かぞく",
+      "meaning": "가족",
+      "group": "말하기 놀이",
+      "tip": "대사의 뜻을 떠올리며 긴 모음, 작은 っ, 문장 끝의 억양과 자연스러운 연결을 연습하세요.",
+      "audio": "audio/27_12.mp3",
+      "activityCode": "02|027",
+      "activityTitle": "함께 말하기 놀이",
+      "kind": "game",
+      "speaker": "",
+      "sourcePage": "02|027 · 함께 말하기 놀이",
+      "sourceFile": "027_01.html",
+      "audioBundle": {
+        "path": "audio/activities/u1-027.bin",
+        "offset": 339806,
+        "length": 29573
+      }
+    },
+    {
+      "id": "u1-027_01-13",
+      "text": "六",
+      "reading": "ろく",
+      "meaning": "6",
+      "group": "말하기 놀이",
+      "tip": "대사의 뜻을 떠올리며 긴 모음, 작은 っ, 문장 끝의 억양과 자연스러운 연결을 연습하세요.",
+      "audio": "audio/27_11.mp3",
+      "activityCode": "02|027",
+      "activityTitle": "함께 말하기 놀이",
+      "kind": "game",
+      "speaker": "",
+      "sourcePage": "02|027 · 함께 말하기 놀이",
+      "sourceFile": "027_01.html",
+      "audioBundle": {
+        "path": "audio/activities/u1-027.bin",
+        "offset": 369379,
+        "length": 27065
+      }
+    },
+    {
+      "id": "u1-027_01-14",
+      "text": "韓国",
+      "reading": "かんこく",
+      "meaning": "한국",
+      "group": "말하기 놀이",
+      "tip": "대사의 뜻을 떠올리며 긴 모음, 작은 っ, 문장 끝의 억양과 자연스러운 연결을 연습하세요.",
+      "audio": "audio/27_24.mp3",
+      "activityCode": "02|027",
+      "activityTitle": "함께 말하기 놀이",
+      "kind": "game",
+      "speaker": "",
+      "sourcePage": "02|027 · 함께 말하기 놀이",
+      "sourceFile": "027_01.html",
+      "audioBundle": {
+        "path": "audio/activities/u1-027.bin",
+        "offset": 396444,
+        "length": 31663
+      }
+    },
+    {
+      "id": "u1-027_01-15",
+      "text": "日本",
+      "reading": "にほん",
+      "meaning": "일본",
+      "group": "말하기 놀이",
+      "tip": "대사의 뜻을 떠올리며 긴 모음, 작은 っ, 문장 끝의 억양과 자연스러운 연결을 연습하세요.",
+      "audio": "audio/27_25.mp3",
+      "activityCode": "02|027",
+      "activityTitle": "함께 말하기 놀이",
+      "kind": "game",
+      "speaker": "",
+      "sourcePage": "02|027 · 함께 말하기 놀이",
+      "sourceFile": "027_01.html",
+      "audioBundle": {
+        "path": "audio/activities/u1-027.bin",
+        "offset": 428107,
+        "length": 28319
+      }
+    },
+    {
+      "id": "u1-027_01-16",
+      "text": "犬",
+      "reading": "いぬ",
+      "meaning": "개",
+      "group": "말하기 놀이",
+      "tip": "대사의 뜻을 떠올리며 긴 모음, 작은 っ, 문장 끝의 억양과 자연스러운 연결을 연습하세요.",
+      "audio": "audio/27_23.mp3",
+      "activityCode": "02|027",
+      "activityTitle": "함께 말하기 놀이",
+      "kind": "game",
+      "speaker": "",
+      "sourcePage": "02|027 · 함께 말하기 놀이",
+      "sourceFile": "027_01.html",
+      "audioBundle": {
+        "path": "audio/activities/u1-027.bin",
+        "offset": 456426,
+        "length": 26648
+      }
+    },
+    {
+      "id": "u1-027_01-17",
+      "text": "はじめまして。",
+      "reading": "はじめまして",
+      "meaning": "처음 뵙겠습니다",
+      "group": "말하기 놀이",
+      "tip": "대사의 뜻을 떠올리며 긴 모음, 작은 っ, 문장 끝의 억양과 자연스러운 연결을 연습하세요.",
+      "audio": "audio/27_22.mp3",
+      "activityCode": "02|027",
+      "activityTitle": "함께 말하기 놀이",
+      "kind": "game",
+      "speaker": "",
+      "sourcePage": "02|027 · 함께 말하기 놀이",
+      "sourceFile": "027_01.html",
+      "audioBundle": {
+        "path": "audio/activities/u1-027.bin",
+        "offset": 483074,
+        "length": 37932
+      }
+    },
+    {
+      "id": "u1-027_01-18",
+      "text": "私",
+      "reading": "わたし",
+      "meaning": "나",
+      "group": "말하기 놀이",
+      "tip": "대사의 뜻을 떠올리며 긴 모음, 작은 っ, 문장 끝의 억양과 자연스러운 연결을 연습하세요.",
+      "audio": "audio/27_21.mp3",
+      "activityCode": "02|027",
+      "activityTitle": "함께 말하기 놀이",
+      "kind": "game",
+      "speaker": "",
+      "sourcePage": "02|027 · 함께 말하기 놀이",
+      "sourceFile": "027_01.html",
+      "audioBundle": {
+        "path": "audio/activities/u1-027.bin",
+        "offset": 521006,
+        "length": 29991
+      }
+    },
+    {
+      "id": "u1-027_01-19",
+      "text": "中国",
+      "reading": "ちゅうごく",
+      "meaning": "중국",
+      "group": "말하기 놀이",
+      "tip": "대사의 뜻을 떠올리며 긴 모음, 작은 っ, 문장 끝의 억양과 자연스러운 연결을 연습하세요.",
+      "audio": "audio/27_20.mp3",
+      "activityCode": "02|027",
+      "activityTitle": "함께 말하기 놀이",
+      "kind": "game",
+      "speaker": "",
+      "sourcePage": "02|027 · 함께 말하기 놀이",
+      "sourceFile": "027_01.html",
+      "audioBundle": {
+        "path": "audio/activities/u1-027.bin",
+        "offset": 550997,
+        "length": 32499
+      }
+    },
+    {
+      "id": "u1-027_01-20",
+      "text": "四",
+      "reading": "よん",
+      "meaning": "4",
+      "group": "말하기 놀이",
+      "tip": "대사의 뜻을 떠올리며 긴 모음, 작은 っ, 문장 끝의 억양과 자연스러운 연결을 연습하세요.",
+      "audio": "audio/27_18_2.mp3",
+      "activityCode": "02|027",
+      "activityTitle": "함께 말하기 놀이",
+      "kind": "game",
+      "speaker": "",
+      "sourcePage": "02|027 · 함께 말하기 놀이",
+      "sourceFile": "027_01.html",
+      "audioBundle": {
+        "path": "audio/activities/u1-027.bin",
+        "offset": 583496,
+        "length": 21647
+      }
+    },
+    {
+      "id": "u1-027-name",
+      "text": "キム・ジウです。",
+      "reading": "きむじうです",
+      "meaning": "내 이름을 일본어로 말하기 (기본 예시: 김지우입니다.)",
+      "group": "말하기 놀이",
+      "tip": "일본어로 적은 내 이름을 입력하고 적용한 뒤 화면의 문장을 읽으세요. 내 이름에는 기기 합성 음성을 사용합니다.",
+      "activityCode": "02|027",
+      "activityTitle": "함께 말하기 놀이",
+      "kind": "personal",
+      "sourcePage": "02|027 · 내 이름 말하기",
+      "sourceFile": "027_01.html"
     }
-  ]
+  ],
+  "version": "20261023-conversation1"
 }
 
