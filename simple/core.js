@@ -29,6 +29,17 @@
   const mean=a=>a.length?Math.round(a.reduce((s,v)=>s+v,0)/a.length*10)/10:null;
   return students.map(student=>{const rs=records.filter(r=>r.studentId===student.id),practiced=new Set(rs.map(r=>r.lessonId));const latest=new Map();for(const r of [...rs].sort((a,b)=>Date.parse(a.at)-Date.parse(b.at)))if(r.assessment)latest.set(r.lessonId,r.assessment);return {student,count:rs.length,coverage:practiced.size,total:lessons.length,match:mean(rs.filter(r=>numeric(r.match)).map(r=>r.match)),ai:mean(rs.filter(r=>r.ai).map(r=>r.ai.score)),teacher:mean([...latest.values()].map(a=>(a.clarity+a.fluency+a.communication)/3)),assessed:latest.size,last:rs.length?[...rs].sort((a,b)=>Date.parse(b.at)-Date.parse(a.at))[0].at:null};});
  }
- const api={uid,clean,normalize,similarity,blank,validate,merge,summary};root.GilbutCore=api;if(typeof module!=='undefined')module.exports=api;
+ function enroll(state,input){
+  const className=String(input.className||'').normalize('NFKC').trim().replace(/\s+/g,' '),name=String(input.name||'').normalize('NFC').trim().replace(/\s+/g,' '),raw=String(input.number||'').normalize('NFKC').trim();
+  if(!className||className.length>60)throw Error('학급을 60자 이내로 입력해 주세요.');
+  if(!/^\d{1,4}$/.test(raw)||Number(raw)<1)throw Error('번호는 1~9999 사이의 숫자로 입력해 주세요.');
+  if(!name||name.length>60)throw Error('이름을 60자 이내로 입력해 주세요.');
+  const number=String(Number(raw));
+  const old=state.students.find(s=>s.className.normalize('NFKC').trim().replace(/\s+/g,' ')===className&&String(Number(s.number.normalize('NFKC')))===number);
+  if(old){if(old.name.normalize('NFC').trim().replace(/\s+/g,' ')!==name)throw Error('이 학급·번호는 이미 등록되어 있습니다. 학급과 번호를 확인하거나 선생님께 알려 주세요.');return {state,student:old,created:false};}
+  if(state.students.length>=3000)throw Error('등록 가능한 학생 수를 초과했습니다. 선생님께 알려 주세요.');
+  const student={id:uid(),className,number,name};return {state:{...state,students:[...state.students,student]},student,created:true};
+ }
+ const api={uid,clean,normalize,similarity,blank,validate,merge,summary,enroll};root.GilbutCore=api;if(typeof module!=='undefined')module.exports=api;
 })(typeof window==='undefined'?globalThis:window);
 
