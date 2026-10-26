@@ -4,7 +4,7 @@
  const clean=(s,n=160)=>typeof s==='string'?s.trim().slice(0,n):'';
  const normalize=s=>String(s).normalize('NFKC').replace(/[\u30a1-\u30f6]/g,c=>String.fromCharCode(c.charCodeAt(0)-96)).replace(/[\p{P}\p{Z}\p{S}\s]/gu,'').toLowerCase();
  function similarity(actual,targets){const a=Array.from(normalize(actual));if(!a.length)return null;return Math.max(...targets.map(t=>{const b=Array.from(normalize(t));let row=Array.from({length:b.length+1},(_,i)=>i);for(let i=1;i<=a.length;i++){const next=[i];for(let j=1;j<=b.length;j++)next[j]=Math.min(next[j-1]+1,row[j]+1,row[j-1]+(a[i-1]===b[j-1]?0:1));row=next;}return Math.round(100*Math.max(0,1-row[b.length]/Math.max(a.length,b.length)));}));}
- function blank(){return {format:'gilbut-local-classroom',version:1,schoolId:uid(),schoolName:'우리 학교',revision:0,students:[],records:[]};}
+ function blank(){return {format:'gilbut-local-classroom',version:1,schoolId:uid(),schoolName:'우리 학교',settings:{recognitionEnabled:false},revision:0,students:[],records:[]};}
  const numeric=n=>typeof n==='number'&&Number.isFinite(n)&&n>=0&&n<=100;
  function validate(data,lessonIds){
   if(!data||data.format!=='gilbut-local-classroom'||data.version!==1||!clean(data.schoolId,100)||!Array.isArray(data.students)||!Array.isArray(data.records)||data.students.length>3000||data.records.length>30000)throw Error('지원하는 학급 기록 파일이 아닙니다.');
@@ -17,7 +17,7 @@
    let audio=r.audio||null;if(audio){if(typeof audio!=='string'||audio.length>6000000||!/^data:audio\/(webm|wav|mp4|ogg)(;codecs=[a-z0-9]+)?;base64,[A-Za-z0-9+/=]+$/.test(audio))throw Error('녹음 파일 형식 또는 크기가 올바르지 않습니다.');}
    return {id:clean(r.id,100),studentId:r.studentId,lessonId:r.lessonId,text:clean(r.text,400),at:r.at,seconds:r.seconds,selfRating:r.selfRating,match:numeric(r.match)?r.match:null,transcript:clean(r.transcript,1000),assessment,ai,audio};
   });if(new Set(records.map(r=>r.id)).size!==records.length)throw Error('파일 안에 중복된 연습 기록이 있습니다.');
-  return {format:data.format,version:1,schoolId:clean(data.schoolId,100),schoolName:clean(data.schoolName,100)||'우리 학교',revision:0,students,records};
+  return {format:data.format,version:1,schoolId:clean(data.schoolId,100),schoolName:clean(data.schoolName,100)||'우리 학교',revision:0,settings:{recognitionEnabled:data.settings?.recognitionEnabled===true},students,records};
  }
  function merge(current,incoming){
   if(current.schoolId!==incoming.schoolId)throw Error('다른 학급 공간의 파일입니다. 이 선생님 프로그램에서 만든 학생용 파일로 연습해야 합니다. 전체 복원은 별도의 복원 버튼을 이용하세요.');
