@@ -86,13 +86,13 @@ async function makePackage(studentId){
  try{const audio={};for(const i of data.items){if(!i.audio)continue;const bytes=new Uint8Array(await audioBytes(i));let binary='';for(let p=0;p<bytes.length;p+=8192)binary+=String.fromCharCode(...bytes.subarray(p,p+8192));audio[i.id]=btoa(binary);}
  let templates=portable?.templates;if(!templates){const paths=['./simple/shell.html','./simple/style.css','./simple/core.js','./simple/app.js'];const parts=await Promise.all(paths.map(p=>fetch(p,{credentials:'omit'}).then(r=>{if(!r.ok)throw Error('실행 파일을 준비하지 못했습니다.');return r.text();})));templates={shell:parts[0],style:parts[1],core:parts[2],app:parts[3]};}
  const s=studentId?state.students.find(s=>s.id===studentId):null;const seed=cloud?C.blank():s?{...state,students:[s],records:[],revision:0}:state;
- const sheetScript=portable?.sheetScript||await fetch('./sheets/Code.gs').then(r=>{if(!r.ok)throw Error('Google 연결 파일을 준비하지 못했습니다.');return r.text();});const pkg={role:s?'student':'teacher',seed,dataset:data,audio,templates,sheetScript};const json=JSON.stringify(pkg).replace(/</g,'\\u003c');const html=templates.shell.replace('<!--STYLE-->',()=>'<style>'+templates.style+'</style>').replace('<!--DATA-->',()=>'<script>window.GILBUT_PACKAGE='+json+';<\/script>').replace('<!--CORE-->',()=>'<script>'+templates.core.replace(/<\/script/gi,'<\\/script')+'<\/script>').replace('<!--APP-->',()=>'<script>'+templates.app.replace(/<\/script/gi,'<\\/script')+'<\/script>');
+ const sheetScript=portable?.sheetScript||await fetch('./sheets/Code.gs?v=20261026-login1').then(r=>{if(!r.ok)throw Error('Google 연결 파일을 준비하지 못했습니다.');return r.text();});const pkg={role:s?'student':'teacher',seed,dataset:data,audio,templates,sheetScript};const json=JSON.stringify(pkg).replace(/</g,'\\u003c');const html=templates.shell.replace('<!--STYLE-->',()=>'<style>'+templates.style+'</style>').replace('<!--DATA-->',()=>'<script>window.GILBUT_PACKAGE='+json+';<\/script>').replace('<!--CORE-->',()=>'<script>'+templates.core.replace(/<\/script/gi,'<\\/script')+'<\/script>').replace('<!--APP-->',()=>'<script>'+templates.app.replace(/<\/script/gi,'<\\/script')+'<\/script>');
  download(new Blob([html],{type:'text/html;charset=utf-8'}),s?'길벗-회화-'+s.className.replace(/[\\/:*?"<>|]/g,'-')+'-'+s.number+'번.html':'길벗-회화-선생님.html');$('#downloadStatus').textContent='완료! 받은 HTML 파일을 Chrome 또는 Edge로 열어 주세요.';toast('PC용 HTML 파일을 받았습니다. 파일을 열어 사용하세요.');
  }finally{busy=false;$('#downloadApp').disabled=false;lockUI();}
 }
 async function openDB(){return new Promise((resolve,reject)=>{const name=studentMode?'gilbut-student-'+portable.seed.schoolId+'-'+lockedStudent:'gilbut-teacher-simple-v1';const req=indexedDB.open(name,1);req.onupgradeneeded=()=>req.result.createObjectStore('space');req.onsuccess=()=>resolve(req.result);req.onerror=()=>reject(Error('브라우저 저장 공간을 열 수 없습니다. 일반 Chrome/Edge 창에서 다시 열어 주세요.'));});}
 async function init(){
- data=portable?.dataset||await fetch('./studio/lessons.json?v=20261026-student2').then(r=>{if(!r.ok)throw Error('교재를 불러올 수 없습니다.');return r.json();});data.items.forEach(i=>lessonIds.add(i.id));if(studentEntry){state=C.blank();}else{db=await openDB();const stored=await new Promise((resolve,reject)=>{const q=db.transaction('space').objectStore('space').get('main');q.onsuccess=()=>resolve(q.result);q.onerror=reject;});state=stored||portable?.seed||C.blank();if(stored){C.validate(stored,lessonIds);}else{state={...C.validate(state,lessonIds),revision:0};await persist(state);}}
+ data=portable?.dataset||await fetch('./studio/lessons.json?v=20261026-login1').then(r=>{if(!r.ok)throw Error('교재를 불러올 수 없습니다.');return r.json();});data.items.forEach(i=>lessonIds.add(i.id));if(studentEntry){state=C.blank();}else{db=await openDB();const stored=await new Promise((resolve,reject)=>{const q=db.transaction('space').objectStore('space').get('main');q.onsuccess=()=>resolve(q.result);q.onerror=reject;});state=stored||portable?.seed||C.blank();if(stored){C.validate(stored,lessonIds);}else{state={...C.validate(state,lessonIds),revision:0};await persist(state);}}
  if(studentMode){const s=state.students.find(s=>s.id===lockedStudent);if(!s)throw Error('학생 정보가 올바르지 않습니다. 선생님에게 파일을 다시 받으세요.');$('#studentBanner').hidden=false;$('#studentBanner').textContent=studentLabel(s)+' · 학생용 연습 파일 · 연습 후 결과 파일을 선생님께 제출하세요.';$$('[data-view="students"]').forEach(b=>b.hidden=true);['receive','restore','downloadApp','apiSettings','recognitionSettings'].forEach(id=>$('#'+id).hidden=true);$('#settingsButton').textContent='백업·도움말';$('#schoolTitle').textContent='나의 회화 연습';$('#rubricForm').hidden=true;$('#aiAttempt').hidden=true;}
  for(const [id,descriptions] of Object.entries({clarity:['소리 구별이 어려움','일부 소리가 불명확함','대부분 명료함','명료하고 안정적임'],fluency:['여러 번 멈추며 말함','도움이 있으면 이어 말함','대체로 자연스럽게 말함','자연스럽고 안정적으로 말함'],communication:['의미 전달에 도움이 필요함','핵심 의미 일부 전달','의미를 대체로 전달','상황에 맞게 명확히 전달']}))$('#'+id).innerHTML='<option value="">평가를 선택하세요</option>'+descriptions.map((s,i)=>'<option value="'+(i+1)+'">'+(i+1)+'단계 · '+s+'</option>').join('');
  rebuild();choose(0);$$('.view').forEach(v=>v.hidden=v.id!==activeView);$$('[data-view]').forEach(b=>b.classList.toggle('active',b.dataset.view===activeView));
@@ -158,7 +158,7 @@ function renderRole(){
 }
 $('#myBackup').onclick=protectedAction(()=>exportJSON(ownBackup(),'길벗-내학습기록-'+new Date().toISOString().slice(0,10)+'.json'));
 $('#myRefresh').onclick=protectedAction(async()=>{if(!canMove())return;$('#myRefresh').disabled=true;try{state=await cloudRequest('state');rebuild();toast('내 학습과 선생님 피드백을 불러왔습니다.');}finally{$('#myRefresh').disabled=false;}});
-$('#myExit').onclick=()=>{if(canMove())location.reload();};
+$('#myExit').onclick=protectedAction(async()=>{if(!canMove())return;try{await cloudRequest('logout');}catch{}finally{forgetLogin();location.reload();}});
 
 function endpoint(value){const u=new URL(value);if(u.origin!=='https://script.google.com'||!/^\/macros\/s\/[\w-]+\/exec$/.test(u.pathname)||u.search||u.hash||u.username||u.password)throw Error('배포된 Google Apps Script의 /exec 주소를 입력하세요.');return u.href;}
 async function cloudRequest(action,payload={},connection=cloud){if(!connection)throw Error('Google 시트를 먼저 연결하세요.');let res;try{res=await fetch(connection.endpoint,{method:'POST',credentials:'omit',redirect:'follow',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify({...payload,action,role:connection.role,token:connection.token}),signal:AbortSignal.timeout(60000)});}catch{throw Error('Google 연결에 실패했습니다. 인터넷과 웹 앱 배포 권한을 확인하세요. 저장 중이었다면 같은 저장 버튼으로 다시 시도할 수 있습니다.');}let result;try{result=await res.json();}catch{throw Error('연결 주소와 웹 앱의 모든 사용자 접근 권한을 확인하세요.');}if(!res.ok||!result.ok)throw Error(result.error||'Google 시트 요청을 완료하지 못했습니다.');return result.data;}
@@ -168,28 +168,63 @@ async function cloudPersist(next){if(saving)throw Error('저장 중입니다.');
  if(next.schoolName!==state.schoolName||JSON.stringify(next.settings)!==JSON.stringify(state.settings))await cloudRequest('settings',{schoolName:next.schoolName,recognitionEnabled:next.settings?.recognitionEnabled===true});
  state=await cloudRequest('state');
  }finally{saving=false;lockUI();}}
-function cloudRoster(){if(studentMode)return;$('#rosterTable').innerHTML=state.students.length?'<table><thead><tr><th>학생</th><th>접속</th><th>관리</th></tr></thead><tbody>'+state.students.map(s=>'<tr><td>'+esc(studentLabel(s))+'</td><td>'+(s.active?'사용 중':'중지')+'</td><td><button data-rotate="'+esc(s.id)+'">코드 재발급</button> <button data-toggle="'+esc(s.id)+'">'+(s.active?'접속 중지':'다시 허용')+'</button></td></tr>').join('')+'</tbody></table>':'<p>초대 주소를 공유하면 학생이 직접 등록할 수 있습니다.</p>';}
+function cloudRoster(){if(studentMode)return;$('#rosterTable').innerHTML=state.students.length?'<table><thead><tr><th>학생</th><th>접속</th><th>관리</th></tr></thead><tbody>'+state.students.map(s=>'<tr><td>'+esc(studentLabel(s))+'</td><td>'+(s.active?'사용 중':'중지')+'</td><td><button data-rotate="'+esc(s.id)+'">비밀번호 재설정</button> <button data-toggle="'+esc(s.id)+'">'+(s.active?'접속 중지':'다시 허용')+'</button></td></tr>').join('')+'</tbody></table>':'<p>초대 주소를 공유하면 학생이 직접 등록할 수 있습니다.</p>';}
 function useCloud(connection,next){cloud=connection;state=next;studentMode=connection.role==='student';lockedStudent=studentMode?state.students[0]?.id:null;
  ['localEnrollment','localBulk','localFiles','receive','restore','studentExport','sheetWelcome'].forEach(id=>$('#'+id).hidden=true);
  $('#cloudRefresh').hidden=false;$('#sheetWelcome').hidden=false;$('#sheetWelcome').querySelector('b').textContent='Google 시트에 연결되었습니다.';$('#sheetWelcome').querySelector('p').textContent='학생 기록은 선생님의 시트에 저장됩니다. 최신 기록 불러오기를 눌러 다른 기기에서 저장한 결과를 확인하세요.';$('#sheetWelcome').querySelector('[data-go]').hidden=true;
- $('#cloudStatus').textContent=studentMode?' · 내 기록만 표시됩니다.':' · '+state.schoolName;
- $('#sheetStatus').textContent='연결 완료 · 학생 관리에서 초대 주소를 만들어 공유하세요.';$('#sheetLogin').hidden=true;$('#sheetLogout').hidden=false;$('#inviteCard').hidden=studentMode;$('#firstHelp').textContent='학생 관리에서 학급 초대 주소를 만들어 학생들에게 공유하세요.';
+ $('#cloudStatus').textContent=studentMode?' · 내 기록만 표시됩니다.':' · '+state.schoolName+(next.authVersion===2?'':' · 비밀번호 로그인을 사용하려면 설정에서 연결 코드를 업데이트하세요.');
+ $('#sheetStatus').textContent=next.authVersion===2?'연결 완료 · 학생 관리에서 초대 주소를 만들어 공유하세요.':'연결 코드 업데이트 필요 · 아래 안내에 따라 Apps Script를 새 버전으로 배포하세요.';$('#sheetLogin').hidden=true;$('#sheetLogout').hidden=false;$('#inviteCard').hidden=studentMode;$('#firstHelp').textContent='학생 관리에서 학급 초대 주소를 만들어 학생들에게 공유하세요.';
  $('#audioStorageNotice').textContent='최대 30초 · 저장을 누르면 녹음과 학습 결과가 선생님의 Google 시트에 전송됩니다.';
 
  rebuild();show(studentMode?'practice':'dashboard');
 }
+function rememberKey(server){return 'gilbut-student-login:'+server;}
+function forgetLogin(){if(cloud?.role==='student')try{localStorage.removeItem(rememberKey(cloud.endpoint));}catch{}}
+async function passwordProof(password,salt){
+ if(!crypto.subtle)throw Error('최신 Chrome 또는 Edge의 보안 연결에서 사용하세요.');
+ if(password.length<8||password.length>128)throw Error('비밀번호는 8~128자로 입력하세요.');
+ const key=await crypto.subtle.importKey('raw',new TextEncoder().encode(password),'PBKDF2',false,['deriveBits']);
+ const bytes=Uint8Array.from(salt.match(/../g),x=>parseInt(x,16));const bits=await crypto.subtle.deriveBits({name:'PBKDF2',hash:'SHA-256',salt:bytes,iterations:600000},key,256);
+ return [...new Uint8Array(bits)].map(b=>b.toString(16).padStart(2,'0')).join('');
+}
+async function newPassword(password,confirmPassword){if(password!==confirmPassword)throw Error('비밀번호 확인이 일치하지 않습니다.');const salt=[...crypto.getRandomValues(new Uint8Array(16))].map(b=>b.toString(16).padStart(2,'0')).join('');return {salt,proof:await passwordProof(password,salt)};}
+async function studentSignIn(params,connection){
+ const controls=['joinClass','studentLogin','setStudentPassword'];
+ const begin=async(mode)=>{controls.forEach(id=>$('#'+id).disabled=true);$('#joinStatus').textContent='학생 정보를 확인하는 중…';try{
+  let version;try{version=await cloudRequest('capabilities',{},connection);}catch{throw Error('선생님의 Google 연결 코드 업데이트가 필요하거나 연결할 수 없습니다. 선생님께 확인해 주세요.');}if(version.authVersion!==2)throw Error('선생님이 Google 연결 코드를 업데이트해야 합니다.');
+  let result;
+  if(mode==='join'){
+   if(!$('#joinConsent').checked)throw Error('정보와 녹음 저장 안내를 확인해 주세요.');
+   const fields=await newPassword($('#joinPassword').value,$('#joinPasswordConfirm').value);
+   result=await cloudRequest('join',{invite:params.get('invite')||'',name:$('#joinName').value.trim(),number:$('#joinNumber').value.trim(),...fields},connection);
+  }else if(mode==='reset'){
+   const fields=await newPassword($('#resetPassword').value,$('#resetPasswordConfirm').value);
+   result=await cloudRequest('setPassword',{className:$('#resetClass').value.trim(),number:$('#resetNumber').value.trim(),resetCode:$('#resetCode').value.trim(),...fields},connection);
+  }else{
+   const identity={className:$('#loginClass').value.trim(),number:$('#loginNumber').value.trim()};
+   let info;try{info=await cloudRequest('loginInfo',identity,connection);}catch{throw Error('선생님의 Google 연결 코드 업데이트가 필요하거나 연결할 수 없습니다. 선생님께 확인해 주세요.');}
+   if(info.authVersion!==2)throw Error('선생님이 Google 연결 코드를 업데이트해야 합니다.');
+   result=await cloudRequest('passwordLogin',{...identity,proof:await passwordProof($('#loginPassword').value,info.salt)},connection);
+  }
+  connection.token=result.code;useCloud(connection,result.state);$('#sheetStudentDialog').close();
+  ['joinPassword','joinPasswordConfirm','loginPassword','resetPassword','resetPasswordConfirm','resetCode'].forEach(id=>$('#'+id).value='');
+  try{if($('#rememberStudent').checked)localStorage.setItem(rememberKey(connection.endpoint),JSON.stringify({token:connection.token,expires:Date.now()+30*86400000}));else localStorage.removeItem(rememberKey(connection.endpoint));}catch{toast('이 브라우저는 로그인 기억을 지원하지 않습니다. 다음에 비밀번호로 접속하세요.');}
+ }catch(e){$('#joinStatus').textContent=e.message;}finally{controls.forEach(id=>$('#'+id).disabled=false);}};
+ $('#joinClass').onclick=()=>begin('join');$('#studentLogin').onclick=()=>begin('login');$('#setStudentPassword').onclick=()=>begin('reset');
+ try{const saved=JSON.parse(localStorage.getItem(rememberKey(connection.endpoint))||'null');if(saved&&saved.expires>Date.now()){connection.token=saved.token;const next=await cloudRequest('state',{},connection);useCloud(connection,next);$('#sheetStudentDialog').close();return;}localStorage.removeItem(rememberKey(connection.endpoint));}catch{try{localStorage.removeItem(rememberKey(connection.endpoint));}catch{}connection.token='';$('#joinStatus').textContent='자동 접속이 만료되었거나 연결되지 않았습니다. 비밀번호로 다시 로그인하세요.';}
+}
+
 async function initSheets(){
- $('#getSheetScript').onclick=protectedAction(async()=>{const source=portable?.sheetScript||await fetch('./sheets/Code.gs').then(r=>{if(!r.ok)throw Error('연결 코드 파일을 받지 못했습니다.');return r.text();});download(new Blob([source],{type:'text/plain;charset=utf-8'}),'길벗-시트연결-Code.gs.txt');});
+ $('#getSheetScript').onclick=protectedAction(async()=>{const source=portable?.sheetScript||await fetch('./sheets/Code.gs?v=20261026-login1').then(r=>{if(!r.ok)throw Error('연결 코드 파일을 받지 못했습니다.');return r.text();});download(new Blob([source],{type:'text/plain;charset=utf-8'}),'길벗-시트연결-Code.gs.txt');});
  $('#sheetLogin').onclick=protectedAction(async()=>{if(!canMove())return;const connection={endpoint:endpoint($('#sheetEndpoint').value.trim()),role:'teacher',token:$('#sheetTeacherCode').value.trim()};$('#sheetLogin').disabled=true;$('#sheetStatus').textContent='내 시트의 자료를 확인하는 중…';try{const next=await cloudRequest('state',{},connection);useCloud(connection,next);$('#sheetTeacherCode').value='';}finally{$('#sheetLogin').disabled=false;}});
  $('#sheetLogout').onclick=()=>{if(canMove())location.reload();};
  $('#cloudRefresh').onclick=protectedAction(async()=>{if(!canMove())return;$('#cloudRefresh').disabled=true;try{state=await cloudRequest('state');rebuild();toast('Google 시트의 최신 기록을 불러왔습니다.');}finally{$('#cloudRefresh').disabled=false;}});
- $('#makeInvite').onclick=protectedAction(async()=>{const result=await cloudRequest('invite',{className:$('#inviteClass').value.trim()});const params=new URLSearchParams({server:cloud.endpoint,invite:result.invite});$('#inviteLink').value='https://ymplan.github.io/gilbut_JC/#'+params.toString();toast('주소를 복사해 해당 학급 학생에게 공유하세요.');});
- $('#rosterTable').addEventListener('click',protectedAction(async e=>{if(!cloud)return;const rotate=e.target.closest('[data-rotate]'),toggle=e.target.closest('[data-toggle]');if(!rotate&&!toggle)return;const id=rotate?.dataset.rotate||toggle.dataset.toggle,s=state.students.find(s=>s.id===id);if(!confirm(studentLabel(s)+(rotate?' 학생의 기존 접속 코드를 무효화하고 새로 발급할까요?':s.active?' 학생의 접속을 중지할까요?':' 학생의 접속을 다시 허용할까요?')))return;const result=await cloudRequest('member',{id,...(rotate?{rotate:true}:{active:!s.active})});if(result.code){$('#issuedCode').value=result.code;$('#sheetCodeDialog').showModal();}state=await cloudRequest('state');rebuild();}));
+ $('#makeInvite').onclick=protectedAction(async()=>{const result=await cloudRequest('invite',{className:$('#inviteClass').value.trim()});const params=new URLSearchParams({server:cloud.endpoint,invite:result.invite,class:$('#inviteClass').value.trim()});$('#inviteLink').value='https://ymplan.github.io/gilbut_JC/#'+params.toString();toast('주소를 복사해 해당 학급 학생에게 공유하세요.');});
+ $('#rosterTable').addEventListener('click',protectedAction(async e=>{if(!cloud)return;const rotate=e.target.closest('[data-rotate]'),toggle=e.target.closest('[data-toggle]');if(!rotate&&!toggle)return;const id=rotate?.dataset.rotate||toggle.dataset.toggle,s=state.students.find(s=>s.id===id);if(!confirm(studentLabel(s)+(rotate?' 학생의 비밀번호를 재설정하고 기존 로그인을 종료할까요?':s.active?' 학생의 접속을 중지할까요?':' 학생의 접속을 다시 허용할까요?')))return;const result=await cloudRequest('member',{id,...(rotate?{resetPassword:true}:{active:!s.active})});if(result.code){$('#issuedCode').value=result.code;$('#sheetCodeDialog').showModal();}state=await cloudRequest('state');rebuild();}));
  $('#closeCode').onclick=()=>{$('#issuedCode').value='';$('#sheetCodeDialog').close();};
  const params=new URLSearchParams(location.hash.slice(1));if(!params.has('server'))return;
- const connection={endpoint:endpoint(params.get('server')),role:'student',token:''};$('#sheetStudentDialog').showModal();$('#sheetStudentDialog').oncancel=e=>e.preventDefault();
- const begin=async(join)=>{if(join&&!$('#joinConsent').checked)throw Error('정보와 녹음 저장 안내를 확인해 주세요.');$('#joinClass').disabled=$('#studentLogin').disabled=true;try{let result;if(join){result=await cloudRequest('join',{invite:params.get('invite')||'',name:$('#joinName').value.trim(),number:$('#joinNumber').value.trim()},connection);connection.token=result.code;}else{connection.token=$('#studentCode').value.trim();result={state:await cloudRequest('state',{},connection)};}useCloud(connection,result.state);$('#sheetStudentDialog').close();$('#studentCode').value='';if(result.code){$('#issuedCode').value=result.code;$('#sheetCodeDialog').showModal();}}catch(e){$('#joinStatus').textContent=e.message;}finally{$('#joinClass').disabled=$('#studentLogin').disabled=false;}};
- $('#joinClass').onclick=protectedAction(()=>begin(true));$('#studentLogin').onclick=protectedAction(()=>begin(false));
+ const connection={endpoint:endpoint(params.get('server')),role:'student',token:''};$('#loginClass').value=$('#resetClass').value=params.get('class')||'';$('#sheetStudentDialog').showModal();$('#sheetStudentDialog').oncancel=e=>e.preventDefault();
+ await studentSignIn(params,connection);
 }
 
 try{await init();await initSheets();}catch(e){$('#firstHelp').hidden=false;$('#firstHelp').textContent=e.message;$$('button').forEach(b=>b.disabled=true);error(e);}

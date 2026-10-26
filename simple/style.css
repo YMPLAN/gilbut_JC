@@ -2,3 +2,5 @@
 
 #enrollDialog::backdrop{background:#f4f6f1}#enrollDialog{box-shadow:0 18px 70px #173e3914}
 
+#sheetStudentDialog::backdrop{background:#f4f6f1}#sheetStudentDialog label{margin:12px 0}#sheetStudentDialog{box-shadow:0 18px 70px #173e3914}
+
