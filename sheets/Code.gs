@@ -6,20 +6,48 @@ function key_(){return Utilities.getUuid().replace(/-/g,'')+Utilities.getUuid().
 function hash_(v){return Utilities.computeDigest(Utilities.DigestAlgorithm.SHA_256,String(v)).map(function(b){return ('0'+((b+256)%256).toString(16)).slice(-2);}).join('');}
 function bad_(s){throw new Error('안내: '+s);}
 function str_(v,n){if(typeof v!=='string'||!v.trim()||v.length>n)bad_('입력 내용을 확인해 주세요.');return v.trim();}
+// Human-readable view. Authentication and record ownership keep their permanent internal IDs.
+function studentDisplayId_(s){
+ var m=String(s.className||'').match(/^\s*(\d{1,2})\s*학년\s*(\d{1,2})\s*반\s*$/),n=Number(s.number);
+ if(m&&Number(m[1])>0&&Number(m[2])>0&&Number(m[2])<=99&&Number.isInteger(n)&&n>0&&n<=99)return String(Number(m[1]))+('0'+Number(m[2])).slice(-2)+('0'+n).slice(-2);
+ return String(s.className||'')+'-'+String(s.number||'');
+}
+function directoryCell_(v){var s=String(v==null?'':v);return /^[\s]*[=+@-]/.test(s)?"'"+s:s;}
+function refreshStudentDirectory_(){
+ var book=SpreadsheetApp.openById(props_().getProperty('JC_SHEET')),name='길벗_학생명단',marker='gilbut-student-directory-v1',sheet=book.getSheetByName(name),created=false;
+ if(sheet&&sheet.getRange(1,1,1,1).getNote()!==marker)bad_('길벗_학생명단 이름의 기존 시트가 있습니다. 그 시트의 이름을 바꾼 후 다시 연결하세요.');
+ if(!sheet){sheet=book.insertSheet(name);sheet.getRange(1,1,1,1).setNote(marker);created=true;}
+ var students=all_('Students').sort(function(a,b){return String(a.className).localeCompare(String(b.className),'ko',{numeric:true})||Number(a.number)-Number(b.number)||String(a.id).localeCompare(String(b.id));});
+ var values=[['학생 ID (학년·반·번호)','이름','비밀번호 상태','학급','번호','접속 상태']].concat(students.map(function(s){return [studentDisplayId_(s),s.name,s.resetHash?(s.resetExpires>Date.now()?'재설정 대기':'재설정 코드 만료'):s.passwordHash?'설정됨':'미설정 (최초 설정 필요)',s.className,s.number,s.active?'사용 중':'접속 중지'].map(directoryCell_);}));
+ var oldRows=sheet.getLastRow();if(values.length>sheet.getMaxRows())sheet.insertRowsAfter(sheet.getMaxRows(),values.length-sheet.getMaxRows());
+ sheet.getRange(1,1,values.length,6).setNumberFormat('@').setValues(values);
+ if(oldRows>values.length)sheet.getRange(values.length+1,1,oldRows-values.length,6).clearContent();
+ sheet.getRange(1,1,1,6).setFontWeight('bold').setBackground('#18564a').setFontColor('#ffffff');sheet.setFrozenRows(1);
+ sheet.getRange(1,3,1,1).setNote('비밀번호 원문은 저장하지 않습니다. 비밀번호 변경은 프로그램의 학생 관리 → 비밀번호 재설정을 사용하세요.');
+ sheet.getRange(1,4,1,1).setNote('자동으로 갱신되는 조회용 명단입니다. 이 표를 직접 수정해도 로그인 정보에는 반영되지 않습니다. 기존 JC_ 시트는 프로그램 저장용이므로 수정·삭제하지 마세요.');
+ if(created){sheet.setColumnWidth(1,190);sheet.setColumnWidth(2,120);sheet.setColumnWidth(3,210);sheet.setColumnWidth(4,150);sheet.setColumnWidth(5,70);sheet.setColumnWidth(6,110);}
+ return book.getUrl()+'#gid='+sheet.getSheetId();
+}
+function refreshStudentDirectorySafe_(){
+ try{var url=refreshStudentDirectory_();props_().setProperty('JC_DIRECTORY_URL',url);props_().setProperty('JC_DIRECTORY_ERROR','');}
+ catch(e){props_().setProperty('JC_DIRECTORY_URL','');props_().setProperty('JC_DIRECTORY_ERROR',String(e.message||'').indexOf('안내: ')===0?e.message.slice(4):'학생 명단 표시를 갱신하지 못했습니다. Google 시트 권한을 확인하고 최신 기록을 다시 불러오세요.');}
+}
+
 function initializeClassroom(){
  var b=SpreadsheetApp.getActiveSpreadsheet(),p=props_();if(!b)bad_('Google 시트에서 Apps Script를 열어 실행하세요.');
  if(p.getProperty('JC_SHEET')&&p.getProperty('JC_SHEET')!==b.getId())bad_('이미 다른 시트에 연결되어 있습니다.');
  p.setProperty('JC_SHEET',b.getId());if(!p.getProperty('JC_TEACHER'))p.setProperty('JC_TEACHER',key_());
  ['JC_Classes','JC_Students','JC_Records','JC_Audio'].forEach(function(n){if(!b.getSheetByName(n))b.insertSheet(n).appendRow(['id','data']);});
  if(!p.getProperty('JC_SCHOOL'))p.setProperty('JC_SCHOOL','우리 학교');
+ refreshStudentDirectorySafe_();
  SpreadsheetApp.getUi().alert('교사 연결 코드 (학생에게 공유하지 마세요)',p.getProperty('JC_TEACHER'),SpreadsheetApp.getUi().ButtonSet.OK);
 }
 function tab_(n){var id=props_().getProperty('JC_SHEET');if(!id)bad_('initializeClassroom을 먼저 실행하세요.');var t=SpreadsheetApp.openById(id).getSheetByName('JC_'+n);if(!t)bad_('시트 구성이 없습니다. 초기 설정을 확인하세요.');return t;}
 function all_(n){var t=tab_(n);if(t.getLastRow()<2)return [];return t.getRange(2,1,t.getLastRow()-1,2).getValues().map(function(r,i){var v=JSON.parse(r[1]);v._row=i+2;return v;});}
-function put_(n,v){var row=v._row,c=Object.assign({},v);delete c._row;var t=tab_(n),values=[[c.id,JSON.stringify(c)]];if(values[0][1].length>48000)bad_('한 기록의 크기가 너무 큽니다.');if(row)t.getRange(row,1,1,2).setValues(values);else t.appendRow(values[0]);}
+function put_(n,v){var row=v._row,c=Object.assign({},v);delete c._row;var t=tab_(n),values=[[c.id,JSON.stringify(c)]];if(values[0][1].length>48000)bad_('한 기록의 크기가 너무 큽니다.');if(row)t.getRange(row,1,1,2).setValues(values);else t.appendRow(values[0]);if(n==='Students')refreshStudentDirectorySafe_();}
 function clean_(v){var c=Object.assign({},v);delete c._row;['passwordHash','salt','resetHash','resetExpires','failures','blockedUntil','sessionExpires'].forEach(function(k){delete c[k];});delete c.hash;delete c.inviteHash;delete c.file;delete c.audioStart;delete c.audioCount;return c;}
 function auth_(p){var token=str_(p.token,100);if(token.length<32)bad_('접속 코드가 올바르지 않습니다.');if(p.role==='teacher'&&hash_(token)===hash_(props_().getProperty('JC_TEACHER')||''))return {teacher:true};if(p.role==='student'){var s=all_('Students').find(function(s){return s.hash===hash_(token)&&s.active&&(!s.sessionExpires||s.sessionExpires>Date.now());});if(s)return {student:s};}bad_('접속 코드가 올바르지 않거나 사용이 중지되었습니다.');}
-function state_(a){var p=props_(),ss=all_('Students').filter(function(s){return a.teacher||s.id===a.student.id;}),ids=ss.map(function(s){return s.id;});return {authVersion:2,format:'gilbut-local-classroom',version:1,schoolId:p.getProperty('JC_SHEET'),schoolName:p.getProperty('JC_SCHOOL'),revision:0,settings:{recognitionEnabled:p.getProperty('JC_RECOGNIZE')==='true'},students:ss.map(clean_),records:all_('Records').filter(function(r){return ids.indexOf(r.studentId)>=0;}).map(clean_)};}
+function state_(a){if(a.teacher)refreshStudentDirectorySafe_();var p=props_(),ss=all_('Students').filter(function(s){return a.teacher||s.id===a.student.id;}),ids=ss.map(function(s){return s.id;});return {authVersion:2,directoryVersion:1,directoryUrl:a.teacher?p.getProperty('JC_DIRECTORY_URL'):undefined,directoryNotice:a.teacher?p.getProperty('JC_DIRECTORY_ERROR'):undefined,format:'gilbut-local-classroom',version:1,schoolId:p.getProperty('JC_SHEET'),schoolName:p.getProperty('JC_SCHOOL'),revision:0,settings:{recognitionEnabled:p.getProperty('JC_RECOGNIZE')==='true'},students:ss.map(clean_),records:all_('Records').filter(function(r){return ids.indexOf(r.studentId)>=0;}).map(clean_)};}
 function loginStudent_(p){var cl=str_(p.className,60),n=str_(p.number,4).replace(/^0+(?=\d)/,'');return all_('Students').find(function(s){return s.className===cl&&s.number===n;});}
 function passwordFields_(p){if(!/^[a-f0-9]{32}$/.test(p.salt||'')||!/^[a-f0-9]{64}$/.test(p.proof||''))bad_('비밀번호 설정 정보를 확인하세요.');return {salt:p.salt,passwordHash:hash_(p.proof)};}
 function passwordRoute_(p){
